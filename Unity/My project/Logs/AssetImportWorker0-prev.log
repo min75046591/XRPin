@@ -1,0 +1,1075 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.51f1 (9f9d16c45e54) revision 10460438'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Enterprise' Language: 'ko' Physical Memory: 32505 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.51f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/SSAFY/My project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+56731
+Successfully changed project path to: C:/Users/SSAFY/My project
+C:/Users/SSAFY/My project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [14048]  Target information:
+
+Player connection [14048]  * "[IP] 172.26.160.1 [Port] 0 [Flags] 2 [Guid] 527964948 [EditorId] 527964948 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-6ABJ64L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [14048]  * "[IP] 70.12.246.232 [Port] 0 [Flags] 2 [Guid] 527964948 [EditorId] 527964948 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-6ABJ64L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [14048] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [14048] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+Refreshing native plugins compatible for Editor in 11.58 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.51f1 (9f9d16c45e54)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.51f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/SSAFY/My project/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3050 Ti Laptop GPU (ID=0x25a0)
+    Vendor:   NVIDIA
+    VRAM:     3990 MB
+    Driver:   30.0.14.7288
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.51f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.51f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.51f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.51f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.51f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007993 seconds.
+- Loaded All Assemblies, in  0.337 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 1676 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.946 seconds
+Domain Reload Profiling: 2283ms
+	BeginReloadAssembly (112ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (131ms)
+		LoadAssemblies (113ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (128ms)
+			TypeCache.Refresh (126ms)
+				TypeCache.ScanAssembly (114ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (1946ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1905ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (1740ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (107ms)
+			ProcessInitializeOnLoadMethodAttributes (53ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.599 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.567 seconds
+Domain Reload Profiling: 1165ms
+	BeginReloadAssembly (162ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (360ms)
+		LoadAssemblies (290ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (172ms)
+			TypeCache.Refresh (148ms)
+				TypeCache.ScanAssembly (132ms)
+			ScanForSourceGeneratedMonoScriptInfo (13ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (567ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (428ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (49ms)
+			ProcessInitializeOnLoadAttributes (331ms)
+			ProcessInitializeOnLoadMethodAttributes (25ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (18ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 9.61 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3465 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (55.1 KB). Loaded Objects now: 3935.
+Memory consumption went from 131.6 MB to 131.5 MB.
+Total: 3.355300 ms (FindLiveObjects: 0.454300 ms CreateObjectMapping: 0.291400 ms MarkObjects: 2.502800 ms  DeleteObjects: 0.105200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 100517.600877 seconds.
+  path: Assets/NRSDK/Scripts/Input/Controller/ControllerStateParseUtility.cs
+  artifactKey: Guid(ed0be01a6d9973040b87803b66f28969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Input/Controller/ControllerStateParseUtility.cs using Guid(ed0be01a6d9973040b87803b66f28969) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '242d9b528ad8e0d4326a488b9ca912d1') in 0.002901 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/NRSDK/Scripts/Input/Controller/ControllerState.cs
+  artifactKey: Guid(0675c35ebb4798d4d998059de6e138e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Input/Controller/ControllerState.cs using Guid(0675c35ebb4798d4d998059de6e138e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd0a6ab4ab8fb442dc032a3ce778ed5bf') in 0.000458 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.660806 seconds.
+  path: Assets/NRSDK/Scripts/Input/Controller/NRPhoneScreen.cs
+  artifactKey: Guid(0bd1d22404b75034d999356abb9f674c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Input/Controller/NRPhoneScreen.cs using Guid(0bd1d22404b75034d999356abb9f674c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '99d58e0e8bef3901c8c11b8a0090e3dd') in 0.000420 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.405 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.875 seconds
+Domain Reload Profiling: 1279ms
+	BeginReloadAssembly (153ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (36ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (188ms)
+		LoadAssemblies (257ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (16ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (875ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (413ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (56ms)
+			ProcessInitializeOnLoadAttributes (316ms)
+			ProcessInitializeOnLoadMethodAttributes (18ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (22ms)
+Refreshing native plugins compatible for Editor in 7.64 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3436 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (29.0 KB). Loaded Objects now: 3938.
+Memory consumption went from 125.6 MB to 125.5 MB.
+Total: 2.714500 ms (FindLiveObjects: 0.278300 ms CreateObjectMapping: 0.091000 ms MarkObjects: 2.303000 ms  DeleteObjects: 0.041500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.375 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.818 seconds
+Domain Reload Profiling: 1191ms
+	BeginReloadAssembly (135ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (178ms)
+		LoadAssemblies (246ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (12ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (818ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (383ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (48ms)
+			ProcessInitializeOnLoadAttributes (295ms)
+			ProcessInitializeOnLoadMethodAttributes (19ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (20ms)
+Refreshing native plugins compatible for Editor in 8.98 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3437 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (29.0 KB). Loaded Objects now: 3941.
+Memory consumption went from 125.8 MB to 125.8 MB.
+Total: 3.306700 ms (FindLiveObjects: 0.321300 ms CreateObjectMapping: 0.132200 ms MarkObjects: 2.799600 ms  DeleteObjects: 0.052700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 463.078931 seconds.
+  path: Assets/ARNotes/HandTracking.unity
+  artifactKey: Guid(5f09e1713fb082f40abe863e3b51db03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARNotes/HandTracking.unity using Guid(5f09e1713fb082f40abe863e3b51db03) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8050486fb672b498c47c2fde17ea4c76') in 0.003176 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 163.726154 seconds.
+  path: Assets/ARNotes/New SceneTemplate.scenetemplate
+  artifactKey: Guid(c0b12c948e5bac447944f7d48771ca47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARNotes/New SceneTemplate.scenetemplate using Guid(c0b12c948e5bac447944f7d48771ca47) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '3d811e51e8daf022e1f059e8f0469419') in 0.042007 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 8.255660 seconds.
+  path: Assets/ARNotes/New Scene.unity
+  artifactKey: Guid(de2a21ba854e363409e51500b0213af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARNotes/New Scene.unity using Guid(de2a21ba854e363409e51500b0213af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '5d239af4934e3caf6e9ec0c231a863ab') in 0.000388 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 48.851654 seconds.
+  path: Assets/NRSDK/Demos/HandTracking_Record/Scripts/HandJointPoseRecorder.cs
+  artifactKey: Guid(aafb9a0652bd18d479537174cb16f04d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Demos/HandTracking_Record/Scripts/HandJointPoseRecorder.cs using Guid(aafb9a0652bd18d479537174cb16f04d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd9bd2780ab18a9accce496ba11f43148') in 0.000455 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 124.872765 seconds.
+  path: Assets/ARNotes/ArNotesProject.unity
+  artifactKey: Guid(de2a21ba854e363409e51500b0213af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARNotes/ArNotesProject.unity using Guid(de2a21ba854e363409e51500b0213af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '08afc9bac89764df50204966d78f9a20') in 0.000775 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.515 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.106 seconds
+Domain Reload Profiling: 1620ms
+	BeginReloadAssembly (197ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (235ms)
+		LoadAssemblies (342ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (17ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1107ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (441ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (62ms)
+			ProcessInitializeOnLoadAttributes (331ms)
+			ProcessInitializeOnLoadMethodAttributes (21ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (25ms)
+Refreshing native plugins compatible for Editor in 5.83 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3436 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (29.0 KB). Loaded Objects now: 3947.
+Memory consumption went from 129.9 MB to 129.9 MB.
+Total: 2.824000 ms (FindLiveObjects: 0.335900 ms CreateObjectMapping: 0.135400 ms MarkObjects: 2.320500 ms  DeleteObjects: 0.031200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 13.84 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (3.1 KB). Loaded Objects now: 3947.
+Memory consumption went from 77.0 MB to 77.0 MB.
+Total: 3.055200 ms (FindLiveObjects: 0.317700 ms CreateObjectMapping: 0.139600 ms MarkObjects: 2.578800 ms  DeleteObjects: 0.018200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 628.926091 seconds.
+  path: Assets/ARNotes/ArNotesProject.unity
+  artifactKey: Guid(de2a21ba854e363409e51500b0213af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARNotes/ArNotesProject.unity using Guid(de2a21ba854e363409e51500b0213af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '486ad669bd2b18dd1d5a7bef068a990d') in 0.003720 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1179.822222 seconds.
+  path: Assets/NRSDK/Scripts/Input/EventSystem/CanvasRaycast/CanvasRaycastTarget.cs
+  artifactKey: Guid(6750858741a2f3744a27ca80b2f55710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Input/EventSystem/CanvasRaycast/CanvasRaycastTarget.cs using Guid(6750858741a2f3744a27ca80b2f55710) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6f385d9472fd34db0e2ad0a9bfaed8f0') in 0.000743 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 11.49 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (0.9 KB). Loaded Objects now: 3947.
+Memory consumption went from 76.4 MB to 76.4 MB.
+Total: 4.293400 ms (FindLiveObjects: 0.288500 ms CreateObjectMapping: 0.106400 ms MarkObjects: 3.876400 ms  DeleteObjects: 0.020500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1154.252230 seconds.
+  path: Assets/NRSDK/Demos/RGBCamera.unity
+  artifactKey: Guid(993f597e755bea3458ddb3a66c40bdd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Demos/RGBCamera.unity using Guid(993f597e755bea3458ddb3a66c40bdd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a27c19a2fa17d64267a37b1f099df73d') in 0.002665 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 11393.458261 seconds.
+  path: Assets/NRSDK/Demos/HandTracking_Record
+  artifactKey: Guid(b1cc82317f527d1458df0d544531e8bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Demos/HandTracking_Record using Guid(b1cc82317f527d1458df0d544531e8bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '5cd4d5ab2e553cdfad1c9cebf995e4e0') in 0.000858 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 403.165291 seconds.
+  path: Assets/NRSDK/Demos/RGBCamera/Materials
+  artifactKey: Guid(c69fb09f64337dc4dbf2e3928176db95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Demos/RGBCamera/Materials using Guid(c69fb09f64337dc4dbf2e3928176db95) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'c120a1886613c4afc9fe8ca5de9b2b0a') in 0.000764 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 306.866870 seconds.
+  path: Assets/NRSDK/Scripts/NRTrackingImageDatabaseEntry.cs
+  artifactKey: Guid(6aed1fdf370a37040bd352739238aaa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRTrackingImageDatabaseEntry.cs using Guid(6aed1fdf370a37040bd352739238aaa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd2c0222723cbd7705a57c4f231fa875c') in 0.000767 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.409894 seconds.
+  path: Assets/NRSDK/Scripts/NRTrackingImageDatabase.cs
+  artifactKey: Guid(622704238d06abf46a6e3e0467d59f56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRTrackingImageDatabase.cs using Guid(622704238d06abf46a6e3e0467d59f56) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '0bf6565eefcd4aab373142eda45672c1') in 0.000572 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.430714 seconds.
+  path: Assets/NRSDK/Scripts/NRTrackableQueryFilter.cs
+  artifactKey: Guid(cf53339a40399c04b8c7f1ead4e5af5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRTrackableQueryFilter.cs using Guid(cf53339a40399c04b8c7f1ead4e5af5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8656d41643a7fd96d40ad19194479f1c') in 0.000471 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.000856 seconds.
+  path: Assets/NRSDK/Scripts/NRTrackableBehaviour.cs
+  artifactKey: Guid(cb63ddaea92337d418bcb3ff088a519c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRTrackableBehaviour.cs using Guid(cb63ddaea92337d418bcb3ff088a519c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b881617ca4c859f4774c8dda360ed231') in 0.000488 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.350702 seconds.
+  path: Assets/NRSDK/Scripts/NRSessionConfig.cs
+  artifactKey: Guid(b8d147dff73310941b29fc513aaef4af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRSessionConfig.cs using Guid(b8d147dff73310941b29fc513aaef4af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '28602f1222a2bb1c01608bb86e06d81e') in 0.000437 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.199832 seconds.
+  path: Assets/NRSDK/Scripts/NRSessionBehaviour.cs
+  artifactKey: Guid(e143cd77ac2aace40af826fca22209a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRSessionBehaviour.cs using Guid(e143cd77ac2aace40af826fca22209a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '730798c7d8488c984b6b99b45b396060') in 0.000416 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.329876 seconds.
+  path: Assets/NRSDK/Scripts/NRWorldAnchor.cs
+  artifactKey: Guid(f8a03e35d4c402640a0a9d295a35df34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRWorldAnchor.cs using Guid(f8a03e35d4c402640a0a9d295a35df34) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '342065530e964e6e97c69f675a60ec37') in 0.000432 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.401580 seconds.
+  path: Assets/NRSDK/Scripts/NRVisualProfiler.cs
+  artifactKey: Guid(effe8e330f6c085409090338927cc368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRVisualProfiler.cs using Guid(effe8e330f6c085409090338927cc368) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ba793663ee5fb5e2d72f7c4a8f2311a9') in 0.000547 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.521543 seconds.
+  path: Assets/NRSDK/Scripts/NRRGBCamTextureYUV.cs
+  artifactKey: Guid(6966c0f27c0c1864681883c0c0ae6f0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRRGBCamTextureYUV.cs using Guid(6966c0f27c0c1864681883c0c0ae6f0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '307744813bcb9bed3058bd3e805ba642') in 0.000466 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.414919 seconds.
+  path: Assets/NRSDK/Scripts/NRRGBCamTexture.cs
+  artifactKey: Guid(87740155e687f6d488770ba8e41a7406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRRGBCamTexture.cs using Guid(87740155e687f6d488770ba8e41a7406) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4a766dece9622a4cde7039432878bf31') in 0.000443 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 29.640947 seconds.
+  path: Assets/NRSDK/Scripts/NRRgbCamera.cs
+  artifactKey: Guid(683225b8c171b9a48ab21794c3f4b3c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRRgbCamera.cs using Guid(683225b8c171b9a48ab21794c3f4b3c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1d2f0081e63f6db30c21df1bfb5dcd3b') in 0.000456 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 123.482444 seconds.
+  path: Assets/NRSDK/Scripts/NRTrackingModeChangedListener.cs
+  artifactKey: Guid(cd4a23c9576feaa40bf9f43be0b697d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRTrackingModeChangedListener.cs using Guid(cd4a23c9576feaa40bf9f43be0b697d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '10783fc7ad1451477ade94cd29616f25') in 0.000567 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.667475 seconds.
+  path: Assets/NRSDK/Scripts/NRTrackingModeChangedTip.cs
+  artifactKey: Guid(4cbfd08b2e59d3f4a83b49092bf97f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRTrackingModeChangedTip.cs using Guid(4cbfd08b2e59d3f4a83b49092bf97f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '48bcf1d5b6b24207ed513bd0bc79b05e') in 0.000532 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.771255 seconds.
+  path: Assets/NRSDK/Scripts/NRVirtualDisplayer.cs
+  artifactKey: Guid(6a23499f7c6839f40a578be5d3144670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRVirtualDisplayer.cs using Guid(6a23499f7c6839f40a578be5d3144670) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '75f481900367ea06985dd63a0afa2b65') in 0.000436 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.769525 seconds.
+  path: Assets/NRSDK/Scripts/NRVirtualPhaseSync.cs
+  artifactKey: Guid(1a6d3b5fc71ac45ad949cc0080038a1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRVirtualPhaseSync.cs using Guid(1a6d3b5fc71ac45ad949cc0080038a1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b03786b3a40814afd629541ade55da57') in 0.000457 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.518202 seconds.
+  path: Assets/NRSDK/Scripts/NRWorldAnchorStore.cs
+  artifactKey: Guid(d4bcaa29723e2a143a23ffe6c70d9ab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/NRWorldAnchorStore.cs using Guid(d4bcaa29723e2a143a23ffe6c70d9ab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '5d8ce8a04a8d78c887621474a1f56770') in 0.000435 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.385522 seconds.
+  path: Assets/NRSDK/Scripts/Android
+  artifactKey: Guid(7c8ebdbcc23ca4992bc347bf0b2763ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Android using Guid(7c8ebdbcc23ca4992bc347bf0b2763ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e52a09f3fbb5cb3f2fe75a6dffb16cc8') in 0.000432 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.813248 seconds.
+  path: Assets/NRSDK/Scripts/Android/AndroidPermissionsRequestResult.cs
+  artifactKey: Guid(695bab28176265e46b7fa12a4e065be7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Android/AndroidPermissionsRequestResult.cs using Guid(695bab28176265e46b7fa12a4e065be7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f002b1f9f7d3e9ccf893692873b63c28') in 0.000544 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.738831 seconds.
+  path: Assets/NRSDK/Scripts/Android/IAndroidPermissionsCheck.cs
+  artifactKey: Guid(87235db6f2e971040ac158c7d9c23fb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Android/IAndroidPermissionsCheck.cs using Guid(87235db6f2e971040ac158c7d9c23fb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '0bf86199c612403d1467c168e94020f7') in 0.000444 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.594788 seconds.
+  path: Assets/NRSDK/Scripts/Android/NRMultiResumeMediator.cs
+  artifactKey: Guid(684a699acff264787a660abafaf1d03d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Android/NRMultiResumeMediator.cs using Guid(684a699acff264787a660abafaf1d03d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '9c3675e0dedf2a0a99faa74bd13410c8') in 0.000436 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.387989 seconds.
+  path: Assets/NRSDK/Scripts/Android/NRXRDisplayListenerProxy.cs
+  artifactKey: Guid(58873b6a8ca674da8baf342641965aa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Android/NRXRDisplayListenerProxy.cs using Guid(58873b6a8ca674da8baf342641965aa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b4762a33cda4482a2f72efe72c4d1a32') in 0.000588 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.200083 seconds.
+  path: Assets/NRSDK/Scripts/Camera
+  artifactKey: Guid(afde6956f9aa4be45b77b6c8169a08ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Camera using Guid(afde6956f9aa4be45b77b6c8169a08ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b12c320cd51d36caaf7c9722ea33f249') in 0.000488 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.570158 seconds.
+  path: Assets/NRSDK/Scripts/Camera/CameraProxyFactory.cs
+  artifactKey: Guid(a09b0d270a7d3984cb5bd180ac941c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Camera/CameraProxyFactory.cs using Guid(a09b0d270a7d3984cb5bd180ac941c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '93ea2f7a0915e0b018a2691efc0ad0ae') in 0.000448 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 43.858335 seconds.
+  path: Assets/NRSDK/Scripts/Trackable
+  artifactKey: Guid(ee6f9df9b07191949970c6ddd963a68d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Trackable using Guid(ee6f9df9b07191949970c6ddd963a68d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a0bc783b1e4102cce8f806869e049fae') in 0.000557 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.133639 seconds.
+  path: Assets/NRSDK/Scripts/Trackable/NRTrackablePlane.cs
+  artifactKey: Guid(9c49c35427d34f0438eb02cc3c488cb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Trackable/NRTrackablePlane.cs using Guid(9c49c35427d34f0438eb02cc3c488cb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'aeb960aa8df93c957a326476ed77ab38') in 0.000476 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.619034 seconds.
+  path: Assets/NRSDK/Scripts/Trackable/NRTrackableImage.cs
+  artifactKey: Guid(f92ef487c1ab7884b962c41ab21650a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Trackable/NRTrackableImage.cs using Guid(f92ef487c1ab7884b962c41ab21650a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'c05f903cd0c29a639342029b6d27ab2e') in 0.000531 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.438503 seconds.
+  path: Assets/NRSDK/Scripts/Trackable/NRTrackable.cs
+  artifactKey: Guid(98cd3f5967a03804fb897a0cd2e4a82a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Trackable/NRTrackable.cs using Guid(98cd3f5967a03804fb897a0cd2e4a82a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4ce408d196133995048bfa76bc360008') in 0.000438 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 48.399918 seconds.
+  path: Assets/NRSDK/Scripts/Subsystems
+  artifactKey: Guid(96b2a2c084ddceb4fa0cde1e3974b9d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Subsystems using Guid(96b2a2c084ddceb4fa0cde1e3974b9d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '2e40dfeaeb9c024a22c6fff2da8810bc') in 0.000443 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.603685 seconds.
+  path: Assets/NRSDK/Scripts/Subsystems/Trackable
+  artifactKey: Guid(e77be0c760563d04b8f5877f7ad7ccf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRSDK/Scripts/Subsystems/Trackable using Guid(e77be0c760563d04b8f5877f7ad7ccf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '65248086715e4530026b13b392f165bc') in 0.000635 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 230.607302 seconds.
+  path: Assets/NRKernalSessionConfig.asset
+  artifactKey: Guid(71ad878549a4af74b8762fad3227e081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NRKernalSessionConfig.asset using Guid(71ad878549a4af74b8762fad3227e081) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'cce90507e0e44ecf86f63d64385b7a7e') in 0.066303 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 216.343484 seconds.
+  path: Assets/ARNotes/Script
+  artifactKey: Guid(9beb1871c3633cb42b97bc2478660885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARNotes/Script using Guid(9beb1871c3633cb42b97bc2478660885) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '15329dce851e2feab523bb2aeded0f42') in 0.000541 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 11.352411 seconds.
+  path: Assets/ARNotes/Script/FollowUserView.cs
+  artifactKey: Guid(6137d4a2401d44b4ea3013c5d35316f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARNotes/Script/FollowUserView.cs using Guid(6137d4a2401d44b4ea3013c5d35316f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '5b29b4a28aae1b251942b56e5d5c8dc4') in 0.000462 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 22.656257 seconds.
+  path: Assets/ARNotes/Script/FollowUserView.cs
+  artifactKey: Guid(6137d4a2401d44b4ea3013c5d35316f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARNotes/Script/FollowUserView.cs using Guid(6137d4a2401d44b4ea3013c5d35316f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8af707b9f7576486433d74f683767ebb') in 0.000548 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.808 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.392 seconds
+Domain Reload Profiling: 2200ms
+	BeginReloadAssembly (188ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (558ms)
+		LoadAssemblies (635ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (26ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (7ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1392ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (367ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (50ms)
+			ProcessInitializeOnLoadAttributes (277ms)
+			ProcessInitializeOnLoadMethodAttributes (16ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Refreshing native plugins compatible for Editor in 6.04 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3437 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (29.0 KB). Loaded Objects now: 3951.
+Memory consumption went from 129.9 MB to 129.9 MB.
+Total: 3.344800 ms (FindLiveObjects: 0.306500 ms CreateObjectMapping: 0.119200 ms MarkObjects: 2.882700 ms  DeleteObjects: 0.035500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/FollowUserView.cs: 84badce023409128396e0d49f4324dfc -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: d2114f183ba45568185134a5feb882fe -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 8.52 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (3.1 KB). Loaded Objects now: 3951.
+Memory consumption went from 77.0 MB to 77.0 MB.
+Total: 4.163800 ms (FindLiveObjects: 0.270300 ms CreateObjectMapping: 0.108000 ms MarkObjects: 3.756200 ms  DeleteObjects: 0.027500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/FollowUserView.cs: 84badce023409128396e0d49f4324dfc -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: d2114f183ba45568185134a5feb882fe -> 
+========================================================================
+Received Import Request.
+  Time since last request: 179.878585 seconds.
+  path: Assets/ARNotes/ArNotesProject.unity
+  artifactKey: Guid(de2a21ba854e363409e51500b0213af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARNotes/ArNotesProject.unity using Guid(de2a21ba854e363409e51500b0213af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8587ea0e112cc8f74f874b393d17f663') in 0.004119 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 10.45 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (0.9 KB). Loaded Objects now: 3951.
+Memory consumption went from 76.4 MB to 76.4 MB.
+Total: 4.392600 ms (FindLiveObjects: 0.300500 ms CreateObjectMapping: 0.110600 ms MarkObjects: 3.957500 ms  DeleteObjects: 0.023000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/FollowUserView.cs: 84badce023409128396e0d49f4324dfc -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: d2114f183ba45568185134a5feb882fe -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1328.035036 seconds.
+  path: Assets/ARNotes/Script/FollowUserView.cs
+  artifactKey: Guid(6137d4a2401d44b4ea3013c5d35316f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARNotes/Script/FollowUserView.cs using Guid(6137d4a2401d44b4ea3013c5d35316f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e1beeedf82009518098a4630e79ac247') in 0.001420 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.435 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.129 seconds
+Domain Reload Profiling: 1564ms
+	BeginReloadAssembly (158ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (214ms)
+		LoadAssemblies (283ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (26ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (6ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1129ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (568ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (23ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (73ms)
+			ProcessInitializeOnLoadAttributes (428ms)
+			ProcessInitializeOnLoadMethodAttributes (30ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (39ms)
+Refreshing native plugins compatible for Editor in 11.56 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3437 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (29.0 KB). Loaded Objects now: 3954.
+Memory consumption went from 129.9 MB to 129.9 MB.
+Total: 3.884900 ms (FindLiveObjects: 0.313300 ms CreateObjectMapping: 0.116800 ms MarkObjects: 3.401600 ms  DeleteObjects: 0.051700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/FollowUserView.cs: 84badce023409128396e0d49f4324dfc -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: d2114f183ba45568185134a5feb882fe -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 7.57 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (3.1 KB). Loaded Objects now: 3954.
+Memory consumption went from 77.0 MB to 77.0 MB.
+Total: 3.271800 ms (FindLiveObjects: 0.264700 ms CreateObjectMapping: 0.099300 ms MarkObjects: 2.891300 ms  DeleteObjects: 0.015800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/FollowUserView.cs: 84badce023409128396e0d49f4324dfc -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: d2114f183ba45568185134a5feb882fe -> 

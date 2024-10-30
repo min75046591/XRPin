@@ -1,0 +1,345 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.glassdeco.arnotes"
+4    android:installLocation="preferExternal"
+5    android:versionCode="1"
+6    android:versionName="0.1" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="31"
+9-->C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="35" />
+10-->C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\main\AndroidManifest.xml
+11
+12    <supports-screens
+12-->C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\main\AndroidManifest.xml:4:3-163
+13        android:anyDensity="true"
+13-->C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\main\AndroidManifest.xml:4:135-160
+14        android:largeScreens="true"
+14-->C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\main\AndroidManifest.xml:4:78-105
+15        android:normalScreens="true"
+15-->C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\main\AndroidManifest.xml:4:49-77
+16        android:smallScreens="true"
+16-->C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\main\AndroidManifest.xml:4:21-48
+17        android:xlargeScreens="true" />
+17-->C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\main\AndroidManifest.xml:4:106-134
+18
+19    <uses-permission android:name="android.permission.BLUETOOTH" />
+19-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:5-68
+19-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:22-65
+20    <uses-permission android:name="android.permission.VIBRATE" />
+20-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:5-66
+20-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:22-63
+21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+21-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:5-81
+21-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:22-78
+22
+23    <uses-feature android:glEsVersion="0x00030000" />
+23-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:5-54
+23-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:19-51
+24    <uses-feature
+24-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:16:5-18:36
+25        android:name="android.hardware.touchscreen"
+25-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:17:9-52
+26        android:required="false" />
+26-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:9-33
+27    <uses-feature
+27-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:5-21:36
+28        android:name="android.hardware.touchscreen.multitouch"
+28-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:20:9-63
+29        android:required="false" />
+29-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:21:9-33
+30    <uses-feature
+30-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:22:5-24:36
+31        android:name="android.hardware.touchscreen.multitouch.distinct"
+31-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:23:9-72
+32        android:required="false" />
+32-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:9-33
+33
+34    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+35    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+35-->[:nrunityandroidpermission-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\69f34a0c569cc521693ee75e866bcbd2\transformed\jetified-nrunityandroidpermission-release\AndroidManifest.xml:8:5-77
+35-->[:nrunityandroidpermission-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\69f34a0c569cc521693ee75e866bcbd2\transformed\jetified-nrunityandroidpermission-release\AndroidManifest.xml:8:22-74
+36    <uses-permission android:name="android.permission.ACTIVITY_EMBEDDING" />
+36-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:9:5-11:47
+36-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:10:9-61
+37    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+37-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:12:5-78
+37-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:12:22-75
+38    <uses-permission android:name="android.permission.REORDER_TASKS" />
+38-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:13:5-72
+38-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:13:22-69
+39    <uses-permission android:name="android.permission.INTERNET" />
+39-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:18:5-67
+39-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:18:22-64
+40    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+40-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:20:5-79
+40-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:20:22-76
+41
+42    <uses-feature
+42-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:22:5-24:36
+43        android:name="android.hardware.camera"
+43-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:23:9-47
+44        android:required="false" />
+44-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:24:9-33
+45    <uses-feature
+45-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:25:5-27:36
+46        android:name="android.hardware.camera.autofocus"
+46-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:26:9-57
+47        android:required="false" />
+47-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:27:9-33
+48    <uses-feature
+48-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:28:5-30:36
+49        android:name="android.hardware.camera.front"
+49-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:29:9-53
+50        android:required="false" />
+50-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:30:9-33
+51    <uses-feature
+51-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:34:5-36:36
+52        android:name="android.hardware.sensor.accelerometer"
+52-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:35:9-61
+53        android:required="false" />
+53-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:36:9-33
+54
+55    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+55-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:10:5-85
+55-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:10:22-82
+56
+57    <queries>
+57-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:12:5-16:15
+58        <intent>
+58-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:13:9-15:18
+59            <action android:name="ai.nreal.nrsdk.network.type.server" />
+59-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:14:13-73
+59-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:14:21-70
+60        </intent>
+61    </queries>
+62
+63    <application
+63-->C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\main\AndroidManifest.xml:3:3-83
+64        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+64-->[androidx.core:core:1.3.0] C:\Users\SSAFY\.gradle\caches\transforms-3\d8caf5b0000163b647974163097b7ebe\transformed\core-1.3.0\AndroidManifest.xml:24:18-86
+65        android:extractNativeLibs="true"
+65-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:34:9-41
+66        android:icon="@mipmap/app_icon"
+66-->C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\main\AndroidManifest.xml:3:49-80
+67        android:label="@string/app_name"
+67-->C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\main\AndroidManifest.xml:3:16-48
+68        android:theme="@style/UnityThemeSelector" >
+68-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:37:9-50
+69        <meta-data
+69-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:38:9-40:36
+70            android:name="nreal_sdk"
+70-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:39:13-37
+71            android:value="true" />
+71-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:40:13-33
+72        <meta-data
+72-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:41:9-43:55
+73            android:name="com.nreal.supportDevices"
+73-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:42:13-52
+74            android:value="1|NrealLight|2|NrealAir" />
+74-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:43:13-52
+75        <meta-data
+75-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:44:9-46:33
+76            android:name="unity.splash-mode"
+76-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:45:13-45
+77            android:value="0" />
+77-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:46:13-30
+78        <meta-data
+78-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:47:9-49:36
+79            android:name="unity.splash-enable"
+79-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:48:13-47
+80            android:value="True" />
+80-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:49:13-33
+81        <meta-data
+81-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:50:9-52:36
+82            android:name="unity.launch-fullscreen"
+82-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:51:13-51
+83            android:value="True" />
+83-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:52:13-33
+84        <meta-data
+84-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:53:9-55:36
+85            android:name="unity.render-outside-safearea"
+85-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:54:13-57
+86            android:value="True" />
+86-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:55:13-33
+87        <meta-data
+87-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:56:9-58:50
+88            android:name="notch.config"
+88-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:57:13-40
+89            android:value="portrait|landscape" />
+89-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:58:13-47
+90        <meta-data
+90-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:59:9-61:36
+91            android:name="unity.auto-report-fully-drawn"
+91-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:60:13-57
+92            android:value="true" />
+92-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:61:13-33
+93
+94        <activity
+94-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:63:9-74:20
+95            android:name="com.unity3d.player.UnityPlayerActivity"
+95-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:64:13-66
+96            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+96-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:65:13-194
+97            android:exported="true"
+97-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:66:13-36
+98            android:hardwareAccelerated="false"
+98-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:67:13-48
+99            android:launchMode="singleTask"
+99-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:68:13-44
+100            android:resizeableActivity="false"
+100-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:69:13-47
+101            android:screenOrientation="portrait" >
+101-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:70:13-49
+102            <meta-data
+102-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:71:13-73:40
+103                android:name="unityplayer.UnityActivity"
+103-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:72:17-57
+104                android:value="true" />
+104-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:73:17-37
+105        </activity>
+106
+107        <service
+107-->[:protectedsession-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\128083284f8a8113a4998b932bb5600f\transformed\jetified-protectedsession-release\AndroidManifest.xml:10:9-14:41
+108            android:name="ai.nreal.protect.session.ProtectSessionService"
+108-->[:protectedsession-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\128083284f8a8113a4998b932bb5600f\transformed\jetified-protectedsession-release\AndroidManifest.xml:11:13-74
+109            android:enabled="true"
+109-->[:protectedsession-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\128083284f8a8113a4998b932bb5600f\transformed\jetified-protectedsession-release\AndroidManifest.xml:12:13-35
+110            android:exported="true"
+110-->[:protectedsession-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\128083284f8a8113a4998b932bb5600f\transformed\jetified-protectedsession-release\AndroidManifest.xml:13:13-36
+111            android:process=":remote" />
+111-->[:protectedsession-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\128083284f8a8113a4998b932bb5600f\transformed\jetified-protectedsession-release\AndroidManifest.xml:14:13-38
+112        <service
+112-->[:nrunityandroidpermission-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\69f34a0c569cc521693ee75e866bcbd2\transformed\jetified-nrunityandroidpermission-release\AndroidManifest.xml:11:9-15:63
+113            android:name="ai.nreal.sdk.MediaProjectionService"
+113-->[:nrunityandroidpermission-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\69f34a0c569cc521693ee75e866bcbd2\transformed\jetified-nrunityandroidpermission-release\AndroidManifest.xml:12:13-63
+114            android:enabled="true"
+114-->[:nrunityandroidpermission-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\69f34a0c569cc521693ee75e866bcbd2\transformed\jetified-nrunityandroidpermission-release\AndroidManifest.xml:13:13-35
+115            android:exported="true"
+115-->[:nrunityandroidpermission-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\69f34a0c569cc521693ee75e866bcbd2\transformed\jetified-nrunityandroidpermission-release\AndroidManifest.xml:14:13-36
+116            android:foregroundServiceType="mediaProjection" />
+116-->[:nrunityandroidpermission-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\69f34a0c569cc521693ee75e866bcbd2\transformed\jetified-nrunityandroidpermission-release\AndroidManifest.xml:15:13-60
+117
+118        <activity
+118-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:48:9-63:20
+119            android:name="ai.nreal.activitylife.NRXRActivity"
+119-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:49:13-62
+120            android:autoRemoveFromRecents="true"
+120-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:50:13-49
+121            android:exported="true"
+121-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:51:13-36
+122            android:launchMode="singleTask"
+122-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:52:13-44
+123            android:resizeableActivity="false"
+123-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:53:13-47
+124            android:screenOrientation="portrait"
+124-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:54:13-49
+125            android:taskAffinity="xreal.unity" >
+125-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:55:13-47
+126            <intent-filter>
+126-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:56:13-62:29
+127                <action android:name="android.intent.action.MAIN" />
+127-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:57:17-69
+127-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:57:25-66
+128
+129                <category android:name="android.intent.category.LAUNCHER" />
+129-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:59:17-77
+129-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:59:27-74
+130                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+130-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:60:17-86
+130-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:60:27-83
+131                <category android:name="android.intent.category.DEFAULT" />
+131-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:61:17-76
+131-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:61:27-73
+132            </intent-filter>
+133        </activity>
+134        <activity
+134-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:64:9-72:20
+135            android:name="ai.nreal.activitylife.NRShadowActivity"
+135-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:65:13-66
+136            android:autoRemoveFromRecents="true"
+136-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:66:13-49
+137            android:excludeFromRecents="true"
+137-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:67:13-46
+138            android:launchMode="singleTask"
+138-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:68:13-44
+139            android:noHistory="true"
+139-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:69:13-37
+140            android:resizeableActivity="true"
+140-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:70:13-46
+141            android:screenOrientation="reverseLandscape" >
+141-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:71:13-57
+142        </activity>
+143        <activity
+143-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:73:9-84:20
+144            android:name="ai.nreal.activitylife.UnityPlayerActivity"
+144-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:74:13-69
+145            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+145-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:75:13-194
+146            android:hardwareAccelerated="false"
+146-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:76:13-48
+147            android:launchMode="singleTask"
+147-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:77:13-44
+148            android:resizeableActivity="true"
+148-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:78:13-46
+149            android:screenOrientation="portrait"
+149-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:79:13-49
+150            android:taskAffinity="xreal.unity" >
+150-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:80:13-47
+151            <meta-data
+151-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:71:13-73:40
+152                android:name="unityplayer.UnityActivity"
+152-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:72:17-57
+153                android:value="true" />
+153-->[:unityLibrary] C:\Users\SSAFY\My project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:73:17-37
+154        </activity>
+155        <activity
+155-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:85:9-94:20
+156            android:name="ai.nreal.activitylife.NRFakeActivity"
+156-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:86:13-64
+157            android:autoRemoveFromRecents="true"
+157-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:87:13-49
+158            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+158-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:88:13-194
+159            android:excludeFromRecents="true"
+159-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:89:13-46
+160            android:hardwareAccelerated="false"
+160-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:90:13-48
+161            android:launchMode="singleTask"
+161-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:91:13-44
+162            android:resizeableActivity="true"
+162-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:92:13-46
+163            android:screenOrientation="reverseLandscape" >
+163-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:93:13-57
+164        </activity>
+165
+166        <meta-data
+166-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:96:9-98:43
+167            android:name="nr_features"
+167-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:97:13-39
+168            android:value="multiResume" />
+168-->[:nractivitylife-release:] C:\Users\SSAFY\.gradle\caches\transforms-3\b03cd40a143902e306c966019de59267\transformed\jetified-nractivitylife-release\AndroidManifest.xml:98:13-40
+169
+170        <uses-library
+170-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:19:9-21:40
+171            android:name="libOpenCL.so"
+171-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:20:13-40
+172            android:required="false" />
+172-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:21:13-37
+173        <uses-library
+173-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:22:9-24:40
+174            android:name="libcdsprpc.so"
+174-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:23:13-41
+175            android:required="false" />
+175-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:24:13-37
+176
+177        <uses-native-library
+177-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:26:9-28:40
+178            android:name="libnr_api.xreal.so"
+178-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:27:13-46
+179            android:required="false" />
+179-->[:nr_loader:] C:\Users\SSAFY\.gradle\caches\transforms-3\fecc422a3b4e67b782f6c92933e8892f\transformed\jetified-nr_loader\AndroidManifest.xml:28:13-37
+180    </application>
+181
+182</manifest>

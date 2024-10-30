@@ -1,0 +1,85 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.glassdeco.arnotes.launcher-mergeReleaseResources-10:/values-v21/values-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\SSAFY\\My project\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\packaged_res\\release\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "3",
+                        "endColumns": "8",
+                        "endOffsets": "154"
+                    },
+                    "to": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "427",
+                        "endLines": "8",
+                        "endColumns": "8",
+                        "endOffsets": "526"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\SSAFY\\.gradle\\caches\\transforms-3\\d8caf5b0000163b647974163097b7ebe\\transformed\\core-1.3.0\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,173,237,304,368,484,610,736,864,1036",
+                        "endLines": "2,3,4,5,6,7,8,9,12,17",
+                        "endColumns": "117,63,66,63,115,125,125,127,12,12",
+                        "endOffsets": "168,232,299,363,479,605,731,859,1031,1383"
+                    },
+                    "to": {
+                        "startLines": "2,4,5,6,14,15,22,26,30,33",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,232,296,363,818,934,1391,1685,1980,2152",
+                        "endLines": "2,4,5,6,14,15,22,26,32,37",
+                        "endColumns": "117,63,66,63,115,125,125,127,12,12",
+                        "endOffsets": "168,291,358,422,929,1055,1512,1808,2147,2499"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\SSAFY\\.gradle\\caches\\transforms-3\\9acb06e40e1126524352f3ad66700a14\\transformed\\media-1.2.1\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,5,8,11",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,223,386,554",
+                        "endLines": "4,7,10,13",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "218,381,549,716"
+                    },
+                    "to": {
+                        "startLines": "16,19,23,27",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "1060,1228,1517,1813",
+                        "endLines": "18,21,25,29",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "1223,1386,1680,1975"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\SSAFY\\.gradle\\caches\\transforms-3\\065e7c9cb0d59730de552988f8dd7971\\transformed\\jetified-exoplayer-ui-2.13.3\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,114",
+                        "endLines": "2,7",
+                        "endColumns": "58,10",
+                        "endOffsets": "109,396"
+                    },
+                    "to": {
+                        "startLines": "3,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,531",
+                        "endLines": "3,13",
+                        "endColumns": "58,10",
+                        "endOffsets": "227,813"
+                    }
+                }
+            ]
+        }
+    ]
+}
