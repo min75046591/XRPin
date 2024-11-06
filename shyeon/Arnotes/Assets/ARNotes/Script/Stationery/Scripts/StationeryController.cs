@@ -8,12 +8,14 @@ using Unity.VisualScripting;
 public class StationeryController : MonoBehaviour
 {
     public HandEnum handEnum;
-    public BasePen TwoDLinePen;
+    public BasePen LinePen;
     public BasePenCtrl TwoDPenCtrl;
+    public BasePenCtrl ThreeDPenCtrl;
     public float lineWidth = 0.005f;
 
     public BaseEraser TwoDLineEraser;
     public BaseEraserCtrl TwoDEraserCtrl;
+    public BaseEraserCtrl ThreeDEraserCtrl;
     public float circleDiameter = 0.005f;
 
     public List<Material> colorMaterials;
@@ -33,6 +35,8 @@ public class StationeryController : MonoBehaviour
     private bool drawingMode;
     private bool removingMode;
     private float lastModeSwitchTime = 0f;
+    private bool twoDMode = true;
+    private bool threeDMode = false;
     public float modeSwitchCooldown = 1.0f;
 
 
@@ -40,7 +44,7 @@ public class StationeryController : MonoBehaviour
     {
         // initialize Pen
         this.SetPenCtrl(TwoDPenCtrl);
-        this.SelectPen(TwoDLinePen);
+        this.SelectPen(LinePen);
         this.CurrentPenController.ChangeColor(colorMaterials[0]);
         this.ChangeLineWidth(lineWidth);
         drawingMode = true;
@@ -69,7 +73,8 @@ public class StationeryController : MonoBehaviour
 
         // to delete
         TestLineWidth(gesture);
-        TestColorChange(gesture);
+        //TestColorChange(gesture);
+        TestDimensionConversion(gesture);
         TestEraserCircleDiameter(gesture);
 
     }
@@ -113,6 +118,13 @@ public class StationeryController : MonoBehaviour
             removingMode = !removingMode;
             lastModeSwitchTime = Time.time;
         }
+    }
+
+    private void TestDimensionConversion(HandGesture gesture)
+    {
+        if (gesture == HandGesture.System) ChangeThreeD();
+
+        if(gesture == HandGesture.ThumbsUp) ChangeTwoD();
     }
 
     // delete
@@ -213,7 +225,8 @@ public class StationeryController : MonoBehaviour
 
     public void SelectPen(BasePen pen)
     {
-        this.CurrentPenController.SelectPen(pen);
+        this.TwoDPenCtrl.SelectPen(pen);
+        this.ThreeDPenCtrl.SelectPen(pen);
     }
 
     public void SetEraserCtrl(BaseEraserCtrl eraserCtrl)
@@ -223,7 +236,8 @@ public class StationeryController : MonoBehaviour
 
     public void SelectEraser(BaseEraser eraser)
     {
-        this.CurrentEraserController.SelectEraser(eraser);
+        this.TwoDEraserCtrl.SelectEraser(eraser);
+        this.ThreeDEraserCtrl.SelectEraser(eraser);
     }
 
     public void AddLineDelta(float lineDelta)
@@ -256,5 +270,21 @@ public class StationeryController : MonoBehaviour
     public void ChangeColor(Material colorMaterial)
     {
         this.CurrentPenController.ChangeColor(colorMaterial);
+    }
+
+    public void ChangeThreeD()
+    {
+        this.SetPenCtrl(ThreeDPenCtrl);
+        this.SetEraserCtrl(ThreeDEraserCtrl);
+        this.twoDMode = false;
+        this.threeDMode = true;
+    }
+
+    public void ChangeTwoD()
+    {
+        this.SetPenCtrl(TwoDPenCtrl);
+        this.SetEraserCtrl(TwoDEraserCtrl);
+        this.twoDMode = true;
+        this.threeDMode = false;
     }
 }

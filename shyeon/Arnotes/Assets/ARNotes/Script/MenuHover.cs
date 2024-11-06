@@ -5,27 +5,27 @@ using NRKernal;
 public class MenuHover : MonoBehaviour
 {
     public HandEnum handEnum;
-    public RectTransform panelRectTransform; // PanelÀÇ RectTransform
-    public Image targetImage; // Æ÷ÀÎÅÍ°¡ ¿Ã·ÁÁ®¾ß ÇÒ ÀÌ¹ÌÁö (¿¹: pen ¹öÆ°)
-    public float hoverTime = 1f; // »óÀ§ ¹öÆ°ÀÇ È£¹ö ½Ã°£ (1ÃÊ)
-    public float buttonHoverTime = 0.5f; // ÇÏÀ§ ¹öÆ°ÀÇ È£¹ö ½Ã°£ (0.5ÃÊ)
-    public Camera nrealCamera; // Nreal Ä«¸Þ¶ó¸¦ ¸í½ÃÀûÀ¸·Î ÁöÁ¤
+    public RectTransform panelRectTransform; // Panelï¿½ï¿½ RectTransform
+    public Image targetImage; // ï¿½ï¿½ï¿½ï¿½ï¿½Í°ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ (ï¿½ï¿½: pen ï¿½ï¿½Æ°)
+    public float hoverTime = 1f; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ È£ï¿½ï¿½ ï¿½Ã°ï¿½ (1ï¿½ï¿½)
+    public float buttonHoverTime = 0.5f; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ È£ï¿½ï¿½ ï¿½Ã°ï¿½ (0.5ï¿½ï¿½)
+    public Camera nrealCamera; // Nreal Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-    public GameObject[] thickButtons; // thick1, thick2, thick3 ¹öÆ° ¹è¿­
+    public GameObject[] thickButtons; // thick1, thick2, thick3 ï¿½ï¿½Æ° ï¿½è¿­
 
     private float hoverTimer = 0f;
     private bool isHovering = false;
-    private GameObject currentHoveredButton = null; // ÇöÀç È£¹ö ÁßÀÎ ÇÏÀ§ ¹öÆ°
+    private GameObject currentHoveredButton = null; // ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°
     private float buttonHoverTimer = 0f;
-    private Color originalTargetColor; // targetImageÀÇ ¿ø·¡ »ö»ó ÀúÀå
+    private Color originalTargetColor; // targetImageï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     void Start()
     {
-        // thick ¹öÆ°Àº ÃÊ±â¿¡´Â ¼û±è
+        // thick ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½Ê±â¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         HideThickButtons(); 
         if (targetImage != null)
         {
-            // targetImageÀÇ ¿ø·¡ »ö»ó ÀúÀå
+            // targetImageï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             originalTargetColor = targetImage.color; 
         }
     }
@@ -41,7 +41,7 @@ public class MenuHover : MonoBehaviour
         Vector3 screenPoint = nrealCamera.WorldToScreenPoint(pose.position);
         Vector2 pointerScreenPos = new Vector2(screenPoint.x, screenPoint.y);
 
-        // Buttons°¡ È°¼ºÈ­µÈ »óÅÂÀÏ ¶§
+        // Buttonsï¿½ï¿½ È°ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         if (thickButtons[0].activeSelf) 
         {
             CheckHoverOnThickButtons(pointerScreenPos);
@@ -54,14 +54,14 @@ public class MenuHover : MonoBehaviour
 
     void CheckHoverOnPanel(Vector2 pointerScreenPos)
     {
-        // Panel ³»ºÎ¿¡ ¼Õ³¡ÀÌ ÀÖ´ÂÁö È®ÀÎ
+        // Panel ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Õ³ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½
         isHovering = RectTransformUtility.RectangleContainsScreenPoint(panelRectTransform, pointerScreenPos, nrealCamera);
 
         if (isHovering && RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
         {
             hoverTimer += Time.deltaTime;
 
-            // Panel¿¡¼­ ÁöÁ¤µÈ ½Ã°£ ÀÌ»ó È£¹ö ½Ã ¹öÆ° È°¼ºÈ­
+            // Panelï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½Ì»ï¿½ È£ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Æ° È°ï¿½ï¿½È­
             if (hoverTimer >= hoverTime)
             {
                 InvertColor(targetImage);
@@ -83,7 +83,7 @@ public class MenuHover : MonoBehaviour
 
             if (RectTransformUtility.RectangleContainsScreenPoint(buttonRect, pointerScreenPos, nrealCamera))
             {
-                // ´Ù¸¥ ¹öÆ°¿¡ ÁøÀÔÇÏ¸é Å¸ÀÌ¸Ó ÃÊ±âÈ­
+                // ï¿½Ù¸ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ Å¸ï¿½Ì¸ï¿½ ï¿½Ê±ï¿½È­
                 if (currentHoveredButton != button)
                 {
                     currentHoveredButton = button;
@@ -92,12 +92,12 @@ public class MenuHover : MonoBehaviour
 
                 buttonHoverTimer += Time.deltaTime;
 
-                // ÇÏÀ§ ¹öÆ°¿¡¼­ ÁöÁ¤µÈ ½Ã°£ ÀÌ»ó È£¹ö ½Ã ¹öÆ° ºñÈ°¼ºÈ­ ¹× »óÀ§ ÀÌ¹ÌÁö »ö»ó ¸®¼Â
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½Ì»ï¿½ È£ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Æ° ï¿½ï¿½È°ï¿½ï¿½È­ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 if (buttonHoverTimer >= buttonHoverTime)
                 {
-                    Debug.Log($"{button.name} ¹öÆ°ÀÌ ¼±ÅÃµÇ¾ú½À´Ï´Ù.");
+                    Debug.Log($"{button.name} ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ÃµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 
-                    // »óÀ§ ÀÌ¹ÌÁö »ö»ó ¸®¼Â
+                    // ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                     ResetColor(targetImage, originalTargetColor); 
                     HideThickButtons();
                 }
@@ -105,16 +105,25 @@ public class MenuHover : MonoBehaviour
             }
         }
 
-        // ÇÏÀ§ ¹öÆ°¿¡¼­ ¹þ¾î³ª¸é ÃÊ±âÈ­
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³ªï¿½ï¿½ ï¿½Ê±ï¿½È­
         buttonHoverTimer = 0f;
         currentHoveredButton = null;
+    }
+
+    private void IncreaseImageSize()
+    {
+        this.targetImage.transform.localScale = Vector3.Lerp(this.targetImage.transform.localScale, targetScale, deltaSpeed * Time.deltaTime);
+    }
+    private void DecreaseImageSize()
+    {
+        this.targetImage.transform.localScale = Vector3.Lerp(this.targetImage.transform.localScale, InitialScale, deltaSpeed * Time.deltaTime);
     }
 
     void ShowThickButtons()
     {
         foreach (var button in thickButtons)
         {
-            //ÇÏÀ§ ¿ÀºêÁ§Æ® buttonµé È°¼ºÈ­
+            //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® buttonï¿½ï¿½ È°ï¿½ï¿½È­
             button.SetActive(true); 
         }
         Debug.Log("Thick buttons are now visible");
@@ -124,7 +133,7 @@ public class MenuHover : MonoBehaviour
     {
         foreach (var button in thickButtons)
         {
-            //ÇÏÀ§ ¿ÀºêÁ§Æ® buttonµé ºñÈ°¼ºÈ­
+            //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® buttonï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­
             button.SetActive(false); 
         }
         hoverTimer = 0f;
