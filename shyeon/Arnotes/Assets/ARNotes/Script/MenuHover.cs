@@ -110,15 +110,6 @@ public class MenuHover : MonoBehaviour
         currentHoveredButton = null;
     }
 
-    private void IncreaseImageSize()
-    {
-        this.targetImage.transform.localScale = Vector3.Lerp(this.targetImage.transform.localScale, targetScale, deltaSpeed * Time.deltaTime);
-    }
-    private void DecreaseImageSize()
-    {
-        this.targetImage.transform.localScale = Vector3.Lerp(this.targetImage.transform.localScale, InitialScale, deltaSpeed * Time.deltaTime);
-    }
-
     void ShowThickButtons()
     {
         foreach (var button in thickButtons)
