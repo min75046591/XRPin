@@ -287,4 +287,20 @@ public class StationeryController : MonoBehaviour
         this.twoDMode = true;
         this.threeDMode = false;
     }
+    public void ConvertToDrawingMode()
+    {
+        this.drawingMode = true;
+        this.removingMode = false;
+    }
+    public void ConvertToRemovingMode()
+    {
+        this.drawingMode = false;
+        this.removingMode = true;
+    }
+
+    public void SwitchDrawingAndRemovingMode()
+    {
+        this.drawingMode = !this.drawingMode;
+        this.removingMode = !this.removingMode;
+    }
 }
