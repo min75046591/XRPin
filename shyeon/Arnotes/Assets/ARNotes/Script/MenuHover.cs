@@ -4,6 +4,7 @@ using NRKernal;
 
 public class MenuHover : MonoBehaviour
 {
+    public MenuCommander menuCommander;
     public HandEnum handEnum;
     public RectTransform panelRectTransform; // Panel�� RectTransform
     public Image targetImage; // �����Ͱ� �÷����� �� �̹��� (��: pen ��ư)
@@ -96,7 +97,7 @@ public class MenuHover : MonoBehaviour
                 if (buttonHoverTimer >= buttonHoverTime)
                 {
                     Debug.Log($"{button.name} ��ư�� ���õǾ����ϴ�.");
-
+                    menuCommander.Command(button.name);
                     // ���� �̹��� ���� ����
                     ResetColor(targetImage, originalTargetColor); 
                     HideThickButtons();
