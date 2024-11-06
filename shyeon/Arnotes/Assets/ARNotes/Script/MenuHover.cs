@@ -14,6 +14,9 @@ public class MenuHover : MonoBehaviour
 
     private float hoverTimer = 0f;
     private bool isHovering = false;
+    private Vector3 targetScale = new Vector3(1.2f, 1.2f, 1.2f);
+    private Vector3 InitialScale = new Vector3(1f, 1f, 1f);
+    private float deltaSpeed = 15f;
 
     void Start()
     {
@@ -55,15 +58,26 @@ public class MenuHover : MonoBehaviour
                 if (hoverTimer >= hoverTime)
                 {
                     ShowThickButtons();
+                    IncreaseImageSize();
                 }
             }
             else
             {
                 // 포인터가 Panel에서 벗어나면 타이머 초기화 및 thick 버튼 숨기기
                 hoverTimer = 0f;
+                DecreaseImageSize();
                 HideThickButtons();
             }
         }
+    }
+
+    private void IncreaseImageSize()
+    {
+        this.targetImage.transform.localScale = Vector3.Lerp(this.targetImage.transform.localScale, targetScale, deltaSpeed * Time.deltaTime);
+    }
+    private void DecreaseImageSize()
+    {
+        this.targetImage.transform.localScale = Vector3.Lerp(this.targetImage.transform.localScale, InitialScale, deltaSpeed * Time.deltaTime);
     }
 
     void ShowThickButtons()

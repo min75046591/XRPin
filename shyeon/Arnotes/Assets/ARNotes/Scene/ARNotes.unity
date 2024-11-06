@@ -4357,18 +4357,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6806624583705064278}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &97604579970731318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4992046546592003664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0caae3179effd8a4cbedb7fe05d49138, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &114354828230504510
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4450,7 +4438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handEnum: 0
   LinePen: {fileID: 4169317454002253430}
-  TwoDPenCtrl: {fileID: 97604579970731318}
+  TwoDPenCtrl: {fileID: 4992046546592003665}
   ThreeDPenCtrl: {fileID: 1390457755}
   lineWidth: 0.005
   TwoDLineEraser: {fileID: 6829183827801652226}
@@ -4668,7 +4656,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4042048853022482490}
-  - component: {fileID: 97604579970731318}
+  - component: {fileID: 4992046546592003665}
   m_Layer: 0
   m_Name: TwoDPenCtrl
   m_TagString: Untagged
@@ -4676,6 +4664,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4992046546592003665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4992046546592003664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824f22a4643a4d54f929cf34de84f041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5726804084802664511
 Transform:
   m_ObjectHideFlags: 0
@@ -4897,7 +4897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114376302391035906, guid: 7f0032a8f9796bb418c31cdb8c16b78e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114376302391035906, guid: 7f0032a8f9796bb418c31cdb8c16b78e, type: 3}
       propertyPath: showJoint
