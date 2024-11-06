@@ -20,7 +20,7 @@ public class MenuHover : MonoBehaviour
         HideThickButtons(); // thick ¹öÆ°Àº ÃÊ±â¿¡´Â ¼û±è
     }
 
-    void Update()   
+    void Update()
     {
         if (!NRInput.Hands.IsRunning)
             return;
