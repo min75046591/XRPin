@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TwoDEraserCtrl : BaseEraserCtrl
+public class ThreeDEraserCtrl : BaseEraserCtrl
 {
     private BaseEraser baseEraser;
     private Vector3 zeroVector = new Vector3(0, 0, 0);
@@ -12,7 +12,6 @@ public class TwoDEraserCtrl : BaseEraserCtrl
 
     public override void CalculatePoint(Vector3 indexTipPos)
     {
-        indexTipPos.z = 0.5f;
         baseEraser.EraserTransform.position = indexTipPos;
     }
     public override void ResetPoint()

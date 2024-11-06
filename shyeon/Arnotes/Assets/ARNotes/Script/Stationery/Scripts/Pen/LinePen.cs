@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TwoDLinePen : BasePen
+public class LinePen : BasePen
 {
     public GameObject lineRendererPrefab;
     public Transform penPoint;

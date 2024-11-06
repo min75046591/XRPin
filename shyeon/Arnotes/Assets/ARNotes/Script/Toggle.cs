@@ -7,6 +7,7 @@ public class InterfaceToggle : MonoBehaviour
 {
     public HandEnum handEnum;
     public GameObject panel; // 열고 닫을 패널 오브젝트
+    public GameObject stationeryContrller;
     private bool isPanelOpen = false; // 패널의 초기 상태
     private bool wasPinching = false; // 이전 프레임에서 Pinch 상태였는지 추적
 
@@ -23,6 +24,7 @@ public class InterfaceToggle : MonoBehaviour
             // 패널의 현재 활성 상태를 반대로 설정
             isPanelOpen = !isPanelOpen;
             panel.SetActive(isPanelOpen);
+            stationeryContrller.SetActive(!isPanelOpen);
         }
 
         // 현재 Pinch 상태를 wasPinching에 업데이트
