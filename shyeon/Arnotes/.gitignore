@@ -71,3 +71,6 @@ crashlytics-build.properties
 # End of https://www.toptal.com/developers/gitignore/api/unity
 
 Library/
+
+# ignore TrackingImage directory
+TrackingImage/

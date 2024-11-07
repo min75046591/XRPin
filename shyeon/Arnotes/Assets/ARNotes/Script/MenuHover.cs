@@ -4,6 +4,7 @@ using NRKernal;
 
 public class MenuHover : MonoBehaviour
 {
+    public MenuCommander menuCommander;
     public HandEnum handEnum;
     public RectTransform panelRectTransform;
     public Transform panel;
@@ -104,6 +105,7 @@ public class MenuHover : MonoBehaviour
                     Debug.Log($"{button.name}을 실행합니다.");
 
                     ResetColor(targetImage, originalTargetColor);
+                    menuCommander.Command(button.name);
                     HideThickButtons();
                 }
                 return;
