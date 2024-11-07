@@ -353,6 +353,7 @@ MonoBehaviour:
   menuCommander: {fileID: 1251311967}
   handEnum: 0
   panelRectTransform: {fileID: 1257029742}
+  panel: {fileID: 1257029742}
   targetImage: {fileID: 62346207}
   hoverTime: 1
   buttonHoverTime: 0.5
@@ -684,6 +685,7 @@ MonoBehaviour:
   menuCommander: {fileID: 0}
   handEnum: 0
   panelRectTransform: {fileID: 1257029742}
+  panel: {fileID: 1257029742}
   targetImage: {fileID: 177781280}
   hoverTime: 1
   buttonHoverTime: 0.5
@@ -1278,7 +1280,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496415775}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -1380,6 +1382,7 @@ MonoBehaviour:
   menuCommander: {fileID: 268044844}
   handEnum: 0
   panelRectTransform: {fileID: 1257029742}
+  panel: {fileID: 1257029742}
   targetImage: {fileID: 496415778}
   hoverTime: 1
   buttonHoverTime: 0.5
@@ -1513,7 +1516,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613453103}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -1615,6 +1618,7 @@ MonoBehaviour:
   menuCommander: {fileID: 1571804110}
   handEnum: 0
   panelRectTransform: {fileID: 1257029742}
+  panel: {fileID: 1257029742}
   targetImage: {fileID: 613453106}
   hoverTime: 1
   buttonHoverTime: 0.5

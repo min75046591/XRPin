@@ -6,28 +6,28 @@ public class MenuHover : MonoBehaviour
 {
     public MenuCommander menuCommander;
     public HandEnum handEnum;
-    public RectTransform panelRectTransform; // Panel�� RectTransform
-    public Image targetImage; // �����Ͱ� �÷����� �� �̹��� (��: pen ��ư)
-    public float hoverTime = 1f; // ���� ��ư�� ȣ�� �ð� (1��)
-    public float buttonHoverTime = 0.5f; // ���� ��ư�� ȣ�� �ð� (0.5��)
-    public Camera nrealCamera; // Nreal ī�޶� ���������� ����
+    public RectTransform panelRectTransform;
+    public Transform panel;
+    public Image targetImage;
+    public static Image currentImage;
+    public float hoverTime = 1f;
+    public float buttonHoverTime = 0.5f;
+    public Camera nrealCamera;
 
-    public GameObject[] thickButtons; // thick1, thick2, thick3 ��ư �迭
+    public GameObject[] thickButtons;
 
     private float hoverTimer = 0f;
     private bool isHovering = false;
-    private GameObject currentHoveredButton = null; // ���� ȣ�� ���� ���� ��ư
+    private GameObject currentHoveredButton = null;
     private float buttonHoverTimer = 0f;
-    private Color originalTargetColor; // targetImage�� ���� ���� ����
+    private Color originalTargetColor;
 
     void Start()
     {
-        // thick ��ư�� �ʱ⿡�� ����
-        HideThickButtons(); 
+        HideThickButtons();
         if (targetImage != null)
         {
-            // targetImage�� ���� ���� ����
-            originalTargetColor = targetImage.color; 
+            originalTargetColor = targetImage.color;
         }
     }
 
@@ -42,31 +42,39 @@ public class MenuHover : MonoBehaviour
         Vector3 screenPoint = nrealCamera.WorldToScreenPoint(pose.position);
         Vector2 pointerScreenPos = new Vector2(screenPoint.x, screenPoint.y);
 
-        // Buttons�� Ȱ��ȭ�� ������ ��
-        if (thickButtons[0].activeSelf) 
+        if (thickButtons[0].activeSelf) // 하위 메뉴가 켜지면
         {
-            CheckHoverOnThickButtons(pointerScreenPos);
+            Debug.Log($"#####################currentImage: {currentImage}");
+            if (currentImage != null && currentImage != targetImage)
+            { HideThickButtonsUnderImage(currentImage); }
+            CheckHoverOnThickButtons(pointerScreenPos); // 하위메뉴를 선택하는 창 관리
         }
         else
         {
-            CheckHoverOnPanel(pointerScreenPos);
+            CheckHoverOnPanel(pointerScreenPos); // 상위 메뉴를 여는 창
         }
     }
 
     void CheckHoverOnPanel(Vector2 pointerScreenPos)
     {
-        // Panel ���ο� �ճ��� �ִ��� Ȯ��
         isHovering = RectTransformUtility.RectangleContainsScreenPoint(panelRectTransform, pointerScreenPos, nrealCamera);
 
-        if (isHovering && RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
+        //if (isHovering && RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
+        if (RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
         {
             hoverTimer += Time.deltaTime;
 
-            // Panel���� ������ �ð� �̻� ȣ�� �� ��ư Ȱ��ȭ
             if (hoverTimer >= hoverTime)
             {
-                InvertColor(targetImage);
+                if (currentImage != null && currentImage != targetImage)
+                { 
+                    HideThickButtonsUnderImage(currentImage);
+                }
                 ShowThickButtons();
+                if (currentImage == null)
+                { currentImage = targetImage; }
+                
+                
             }
         }
         else
@@ -84,7 +92,6 @@ public class MenuHover : MonoBehaviour
 
             if (RectTransformUtility.RectangleContainsScreenPoint(buttonRect, pointerScreenPos, nrealCamera))
             {
-                // �ٸ� ��ư�� �����ϸ� Ÿ�̸� �ʱ�ȭ
                 if (currentHoveredButton != button)
                 {
                     currentHoveredButton = button;
@@ -93,30 +100,29 @@ public class MenuHover : MonoBehaviour
 
                 buttonHoverTimer += Time.deltaTime;
 
-                // ���� ��ư���� ������ �ð� �̻� ȣ�� �� ��ư ��Ȱ��ȭ �� ���� �̹��� ���� ����
                 if (buttonHoverTimer >= buttonHoverTime)
                 {
-                    Debug.Log($"{button.name} ��ư�� ���õǾ����ϴ�.");
+                    Debug.Log($"{button.name}을 실행합니다.");
+
+                    ResetColor(targetImage, originalTargetColor);
                     menuCommander.Command(button.name);
-                    // ���� �̹��� ���� ����
-                    ResetColor(targetImage, originalTargetColor); 
                     HideThickButtons();
                 }
                 return;
             }
         }
 
-        // ���� ��ư���� ����� �ʱ�ȭ
         buttonHoverTimer = 0f;
         currentHoveredButton = null;
     }
 
     void ShowThickButtons()
     {
+        InvertColor(targetImage);
+
         foreach (var button in thickButtons)
         {
-            //���� ������Ʈ button�� Ȱ��ȭ
-            button.SetActive(true); 
+            button.SetActive(true);
         }
         Debug.Log("Thick buttons are now visible");
     }
@@ -125,8 +131,7 @@ public class MenuHover : MonoBehaviour
     {
         foreach (var button in thickButtons)
         {
-            //���� ������Ʈ button�� ��Ȱ��ȭ
-            button.SetActive(false); 
+            button.SetActive(false);
         }
         hoverTimer = 0f;
         buttonHoverTimer = 0f;
@@ -148,6 +153,20 @@ public class MenuHover : MonoBehaviour
         if (image != null)
         {
             image.color = originalColor;
+        }
+    }
+
+    void HideThickButtonsUnderImage(Image parentImage)
+    {
+        Debug.Log("HideThick 함수 실행");
+        currentImage = null;
+        Debug.Log("currentImage 초기화");
+        ResetColor(targetImage, originalTargetColor);
+
+        foreach (var button in thickButtons)
+        {
+            Debug.Log($"{button}");
+            button.SetActive(false);
         }
     }
 }
