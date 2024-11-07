@@ -44,7 +44,6 @@ public class MenuHover : MonoBehaviour
 
         if (thickButtons[0].activeSelf) // 하위 메뉴가 켜지면
         {
-            Debug.Log($"#####################currentImage: {currentImage}");
             if (currentImage != null && currentImage != targetImage)
             { HideThickButtonsUnderImage(currentImage); }
             CheckHoverOnThickButtons(pointerScreenPos); // 하위메뉴를 선택하는 창 관리
@@ -102,8 +101,6 @@ public class MenuHover : MonoBehaviour
 
                 if (buttonHoverTimer >= buttonHoverTime)
                 {
-                    Debug.Log($"{button.name}을 실행합니다.");
-
                     ResetColor(targetImage, originalTargetColor);
                     menuCommander.Command(button.name);
                     HideThickButtons();
@@ -158,14 +155,11 @@ public class MenuHover : MonoBehaviour
 
     void HideThickButtonsUnderImage(Image parentImage)
     {
-        Debug.Log("HideThick 함수 실행");
         currentImage = null;
-        Debug.Log("currentImage 초기화");
         ResetColor(targetImage, originalTargetColor);
 
         foreach (var button in thickButtons)
         {
-            Debug.Log($"{button}");
             button.SetActive(false);
         }
     }
