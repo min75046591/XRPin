@@ -60,8 +60,8 @@ public class MenuHover : MonoBehaviour
 
     void CheckHoverOnPanel(Vector2 pointerScreenPos)
     {
+        targetImage.transform.localScale = Vector3.Lerp(initialSize, scaledSize, hoverTimer * 3f);
         isHovering = RectTransformUtility.RectangleContainsScreenPoint(panelRectTransform, pointerScreenPos, nrealCamera);
-        targetImage.transform.localScale = Vector3.Lerp(initialSize, scaledSize, hoverTimer);
         //if (isHovering && RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
         if (RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
         {
@@ -69,21 +69,25 @@ public class MenuHover : MonoBehaviour
             if (hoverTimer >= hoverTime)
             {
                 Debug.Log(targetImage.transform.localScale);
-                if (currentImage != null && currentImage != targetImage)
-                { 
-                    HideThickButtonsUnderImage(currentImage);
-                }
+                //if (currentImage != null && currentImage != targetImage)
+                //{
+                //    hoverTimer -= Time.deltaTime * 3f;
+                //    if (hoverTimer <= 0) hoverTimer = 0;
+                //    HideThickButtonsUnderImage(currentImage);
+                //}
+                hoverTimer = 0;
                 ShowThickButtons();
                 if (currentImage == null)
                 { currentImage = targetImage; }
-                
-                
+
+
             }
         }
         else
         {
-            hoverTimer -= Time.deltaTime;
-            if (hoverTimer <= 0) hoverTimer = 0;
+            hoverTimer = 0;
+            //hoverTimer -= Time.deltaTime * 3f;
+            //if (hoverTimer <= 0) hoverTimer = 0;
             HideThickButtons();
         }
     }
@@ -95,7 +99,7 @@ public class MenuHover : MonoBehaviour
             RectTransform buttonRect = button.GetComponent<RectTransform>();
             if (RectTransformUtility.RectangleContainsScreenPoint(buttonRect, pointerScreenPos, nrealCamera))
             {
-                button.transform.localScale = Vector3.Lerp(initialSize, scaledSize, buttonHoverTimer);
+                button.transform.localScale = Vector3.Lerp(initialSize, scaledSize, buttonHoverTimer * 2f);
 
                 if (currentHoveredButton != button)
                 {
