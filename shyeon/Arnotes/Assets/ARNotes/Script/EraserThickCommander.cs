@@ -23,7 +23,7 @@ public class EraserThickCommander : MenuCommander
         }
         else if (commandParam == "ethick3")
         {
-            this.stationeryController.ChangeEraserDiameter(0.1f);
+            this.stationeryController.ChangeEraserDiameter(0.05f);
         }
     }
 }

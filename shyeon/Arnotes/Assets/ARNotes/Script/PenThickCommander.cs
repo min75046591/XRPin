@@ -24,7 +24,7 @@ public class PenThickCommander : MenuCommander
         }
         else if (commandParam == "pthick3")
         {
-            this.stationeryController.ChangeLineWidth(0.1f);
+            this.stationeryController.ChangeLineWidth(0.05f);
         }
     }
 }

@@ -486,6 +486,15 @@ namespace NRKernal
             private float BetaTarget = 10;
             private float MinCutoffTarget = 1.0f;
             private float DCutOffTarget = 1.0f;
+
+            //public float Beta = 20f;
+            //public float MinCutoff = 0.5f;
+            //public float DCutOff = 1.0f;
+            //(float t, Vector3 x, Vector3 dx) _prev;
+
+            //private float BetaTarget = 20;
+            //private float MinCutoffTarget = 0.5f;
+            //private float DCutOffTarget = 1.0f;
             public void SetEuroParam(float miniCutoff,float cutOff,float beta,bool lerp = true)
             {
                 this.BetaTarget = beta;

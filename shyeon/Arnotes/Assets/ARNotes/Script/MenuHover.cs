@@ -10,17 +10,21 @@ public class MenuHover : MonoBehaviour
     public Transform panel;
     public Image targetImage;
     public static Image currentImage;
-    public float hoverTime = 1f;
+    public float hoverTime = 0.5f;
     public float buttonHoverTime = 0.5f;
     public Camera nrealCamera;
-
     public GameObject[] thickButtons;
+    public float speed = 1f;
+
 
     private float hoverTimer = 0f;
     private bool isHovering = false;
     private GameObject currentHoveredButton = null;
     private float buttonHoverTimer = 0f;
     private Color originalTargetColor;
+    private Vector3 initialSize = new Vector3(1.0f, 1.0f, 1.0f);
+    private Vector3 scaledSize = new Vector3(1.2f, 1.2f, 1.2f);
+
 
     void Start()
     {
@@ -56,29 +60,34 @@ public class MenuHover : MonoBehaviour
 
     void CheckHoverOnPanel(Vector2 pointerScreenPos)
     {
+        targetImage.transform.localScale = Vector3.Lerp(initialSize, scaledSize, hoverTimer * 3f);
         isHovering = RectTransformUtility.RectangleContainsScreenPoint(panelRectTransform, pointerScreenPos, nrealCamera);
-
         //if (isHovering && RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
         if (RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
         {
             hoverTimer += Time.deltaTime;
-
             if (hoverTimer >= hoverTime)
             {
-                if (currentImage != null && currentImage != targetImage)
-                { 
-                    HideThickButtonsUnderImage(currentImage);
-                }
+                Debug.Log(targetImage.transform.localScale);
+                //if (currentImage != null && currentImage != targetImage)
+                //{
+                //    hoverTimer -= Time.deltaTime * 3f;
+                //    if (hoverTimer <= 0) hoverTimer = 0;
+                //    HideThickButtonsUnderImage(currentImage);
+                //}
+                hoverTimer = 0;
                 ShowThickButtons();
                 if (currentImage == null)
                 { currentImage = targetImage; }
-                
-                
+
+
             }
         }
         else
         {
-            hoverTimer = 0f;
+            hoverTimer = 0;
+            //hoverTimer -= Time.deltaTime * 3f;
+            //if (hoverTimer <= 0) hoverTimer = 0;
             HideThickButtons();
         }
     }
@@ -88,9 +97,10 @@ public class MenuHover : MonoBehaviour
         foreach (var button in thickButtons)
         {
             RectTransform buttonRect = button.GetComponent<RectTransform>();
-
             if (RectTransformUtility.RectangleContainsScreenPoint(buttonRect, pointerScreenPos, nrealCamera))
             {
+                button.transform.localScale = Vector3.Lerp(initialSize, scaledSize, buttonHoverTimer * 2f);
+
                 if (currentHoveredButton != button)
                 {
                     currentHoveredButton = button;
@@ -130,7 +140,7 @@ public class MenuHover : MonoBehaviour
         {
             button.SetActive(false);
         }
-        hoverTimer = 0f;
+        //hoverTimer = 0f;
         buttonHoverTimer = 0f;
         currentHoveredButton = null;
         isHovering = false;
