@@ -93,9 +93,10 @@ public class MenuHover : MonoBehaviour
         foreach (var button in thickButtons)
         {
             RectTransform buttonRect = button.GetComponent<RectTransform>();
-
             if (RectTransformUtility.RectangleContainsScreenPoint(buttonRect, pointerScreenPos, nrealCamera))
             {
+                button.transform.localScale = Vector3.Lerp(initialSize, scaledSize, buttonHoverTimer);
+
                 if (currentHoveredButton != button)
                 {
                     currentHoveredButton = button;
