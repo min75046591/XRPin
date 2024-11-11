@@ -569,11 +569,8 @@ RectTransform:
   - {fileID: 1811378910}
   - {fileID: 1783955020}
   - {fileID: 1174072711}
-<<<<<<< HEAD
   - {fileID: 1144686263}
-=======
   - {fileID: 426538618}
->>>>>>> feat/save
   m_Father: {fileID: 1257029742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
