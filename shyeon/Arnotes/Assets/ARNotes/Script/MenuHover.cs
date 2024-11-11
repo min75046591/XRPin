@@ -35,6 +35,7 @@ public class MenuHover : MonoBehaviour
         }
     }
 
+
     void Update()
     {
         if (!NRInput.Hands.IsRunning)
