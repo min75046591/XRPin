@@ -43,14 +43,14 @@ public class StationeryController : MonoBehaviour
     void Start()
     {
         // initialize Pen
-        this.SetPenCtrl(TwoDPenCtrl);
+        this.SetPenCtrl(ThreeDPenCtrl);
         this.SelectPen(LinePen);
         this.CurrentPenController.ChangeColor(colorMaterials[0]);
         this.ChangeLineWidth(lineWidth);
         drawingMode = true;
 
         // initialize Eraser
-        this.SetEraserCtrl(TwoDEraserCtrl);
+        this.SetEraserCtrl(ThreeDEraserCtrl);
         this.SelectEraser(TwoDLineEraser);
         this.ChangeEraserDiameter(circleDiameter);
         removingMode = false;
@@ -72,10 +72,10 @@ public class StationeryController : MonoBehaviour
         JudgeModeSwitching(gesture);
 
         // to delete
-        TestLineWidth(gesture);
+        //TestLineWidth(gesture);
         //TestColorChange(gesture);
-        TestDimensionConversion(gesture);
-        TestEraserCircleDiameter(gesture);
+        //TestDimensionConversion(gesture);
+        //TestEraserCircleDiameter(gesture);
 
     }
 
@@ -120,12 +120,12 @@ public class StationeryController : MonoBehaviour
         }
     }
 
-    private void TestDimensionConversion(HandGesture gesture)
-    {
-        if (gesture == HandGesture.System) ChangeThreeD();
+    //private void TestDimensionConversion(HandGesture gesture)
+    //{
+    //    if (gesture == HandGesture.System) ChangeThreeD();
 
-        if(gesture == HandGesture.ThumbsUp) ChangeTwoD();
-    }
+    //    if(gesture == HandGesture.ThumbsUp) ChangeTwoD();
+    //}
 
     // delete
     private int DetectDirection()
@@ -181,42 +181,42 @@ public class StationeryController : MonoBehaviour
         return (Time.time - lastModeSwitchTime) > modeSwitchCooldown && gesture == HandGesture.Call;
     }
 
-    private void TestLineWidth(HandGesture gesture)
-    {
-        if(drawingMode && gesture == HandGesture.Grab)
-        {
-            this.AddLineDelta(0.0001f);
-        }
-        else if(drawingMode && gesture == HandGesture.Victory)
-        {
-            this.AddLineDelta(-0.0001f);
-        }
-    }
+    //private void TestLineWidth(HandGesture gesture)
+    //{
+    //    if(drawingMode && gesture == HandGesture.Grab)
+    //    {
+    //        this.AddLineDelta(0.0001f);
+    //    }
+    //    else if(drawingMode && gesture == HandGesture.Victory)
+    //    {
+    //        this.AddLineDelta(-0.0001f);
+    //    }
+    //}
 
-    private void TestColorChange(HandGesture gesture)
-    {
-        if (gesture == HandGesture.ThumbsUp)
-        {
-            int colorOffset = DetectDirection();
-            if (colorOffset == 0) return;
-            colorIdx += colorOffset;
-            if (colorIdx < 0) colorIdx = colorMaterials.Count - 1;
-            else if (colorIdx == colorMaterials.Count) colorIdx = 0;
-            this.CurrentPenController.ChangeColor(colorMaterials[colorIdx]);
-        }
-    }
+    //private void TestColorChange(HandGesture gesture)
+    //{
+    //    if (gesture == HandGesture.ThumbsUp)
+    //    {
+    //        int colorOffset = DetectDirection();
+    //        if (colorOffset == 0) return;
+    //        colorIdx += colorOffset;
+    //        if (colorIdx < 0) colorIdx = colorMaterials.Count - 1;
+    //        else if (colorIdx == colorMaterials.Count) colorIdx = 0;
+    //        this.CurrentPenController.ChangeColor(colorMaterials[colorIdx]);
+    //    }
+    //}
 
-    private void TestEraserCircleDiameter(HandGesture gesture)
-    {
-        if (removingMode && gesture == HandGesture.Grab)
-        {
-            this.AddDiameterDelta(0.0001f);
-        }
-        else if (removingMode && gesture == HandGesture.Victory)
-        {
-            this.AddDiameterDelta(-0.0001f);
-        }
-    }
+    //private void TestEraserCircleDiameter(HandGesture gesture)
+    //{
+    //    if (removingMode && gesture == HandGesture.Grab)
+    //    {
+    //        this.AddDiameterDelta(0.0001f);
+    //    }
+    //    else if (removingMode && gesture == HandGesture.Victory)
+    //    {
+    //        this.AddDiameterDelta(-0.0001f);
+    //    }
+    //}
 
     public void SetPenCtrl(BasePenCtrl penCtrl)
     {
@@ -236,7 +236,7 @@ public class StationeryController : MonoBehaviour
 
     public void SelectEraser(BaseEraser eraser)
     {
-        this.TwoDEraserCtrl.SelectEraser(eraser);
+        //this.TwoDEraserCtrl.SelectEraser(eraser);
         this.ThreeDEraserCtrl.SelectEraser(eraser);
     }
 
@@ -280,13 +280,13 @@ public class StationeryController : MonoBehaviour
         this.threeDMode = true;
     }
 
-    public void ChangeTwoD()
-    {
-        this.SetPenCtrl(TwoDPenCtrl);
-        this.SetEraserCtrl(TwoDEraserCtrl);
-        this.twoDMode = true;
-        this.threeDMode = false;
-    }
+    //public void ChangeTwoD()
+    //{
+    //    this.SetPenCtrl(TwoDPenCtrl);
+    //    this.SetEraserCtrl(TwoDEraserCtrl);
+    //    this.twoDMode = true;
+    //    this.threeDMode = false;
+    //}
     public void ConvertToDrawingMode()
     {
         this.drawingMode = true;

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using NRKernal;
+using Unity.VisualScripting;
 
 public class MenuHover : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class MenuHover : MonoBehaviour
     public Camera nrealCamera;
     public GameObject[] thickButtons;
     public float speed = 1f;
+    public Image SubTargetImage;
 
 
     private float hoverTimer = 0f;
@@ -47,7 +49,12 @@ public class MenuHover : MonoBehaviour
         Vector3 screenPoint = nrealCamera.WorldToScreenPoint(pose.position);
         Vector2 pointerScreenPos = new Vector2(screenPoint.x, screenPoint.y);
 
-        if (thickButtons[0].activeSelf) // 하위 메뉴가 켜지면
+        if(targetImage.name == "record")
+        {
+            Debug.Log("record-image 호출");
+        }
+
+        if (thickButtons[0].activeSelf && targetImage.name != "record") // 하위 메뉴가 켜지면
         {
             if (currentImage != null && currentImage != targetImage)
             { HideThickButtonsUnderImage(currentImage); }
@@ -80,8 +87,6 @@ public class MenuHover : MonoBehaviour
                 ShowThickButtons();
                 if (currentImage == null)
                 { currentImage = targetImage; }
-
-
             }
         }
         else
@@ -112,7 +117,8 @@ public class MenuHover : MonoBehaviour
 
                 if (buttonHoverTimer >= buttonHoverTime)
                 {
-                    ResetColor(targetImage, originalTargetColor);
+                    Debug.Log(button);
+                    ResetColor(SubTargetImage, originalTargetColor);
                     menuCommander.Command(button.name);
                     HideThickButtons();
                 }
@@ -126,7 +132,7 @@ public class MenuHover : MonoBehaviour
 
     void ShowThickButtons()
     {
-        InvertColor(targetImage);
+        InvertColor(SubTargetImage);
 
         foreach (var button in thickButtons)
         {
@@ -167,7 +173,7 @@ public class MenuHover : MonoBehaviour
     void HideThickButtonsUnderImage(Image parentImage)
     {
         currentImage = null;
-        ResetColor(targetImage, originalTargetColor);
+        ResetColor(SubTargetImage, originalTargetColor);
 
         foreach (var button in thickButtons)
         {
