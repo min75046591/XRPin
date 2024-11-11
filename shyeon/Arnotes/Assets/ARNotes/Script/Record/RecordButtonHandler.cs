@@ -9,7 +9,6 @@ using System.Collections;
 using System;
 using UnityEngine.Android;
 
-
 public class RecordButtonHandler : MonoBehaviour
 {
     public TextMeshProUGUI buttonText;
@@ -18,6 +17,7 @@ public class RecordButtonHandler : MonoBehaviour
     public NRPreviewer previewer;
     private bool isRecording = false;
     private bool isProcessing = false;
+    private bool isVideoCaptureInitialized = false; // 초기화 상태 플래그
 
     private void Start()
     {
@@ -51,6 +51,7 @@ public class RecordButtonHandler : MonoBehaviour
             if (captureObject != null)
             {
                 videoCapture = captureObject;
+                isVideoCaptureInitialized = true; // 초기화 완료 표시
                 Debug.Log("NRVideoCapture 객체 생성 성공");
             }
             else
@@ -83,9 +84,10 @@ public class RecordButtonHandler : MonoBehaviour
         StartRecording();
     }
 
-    private void StartRecording()
+    // 외부에서 호출할 수 있도록 public으로 설정
+    public void StartRecording()
     {
-        if (videoCapture == null || isRecording || isProcessing)
+        if (!isVideoCaptureInitialized || videoCapture == null || isRecording || isProcessing)
         {
             Debug.LogWarning("NRVideoCapture가 초기화되지 않았거나 이미 녹화 중이거나 작업이 진행 중입니다.");
             return;
@@ -134,7 +136,8 @@ public class RecordButtonHandler : MonoBehaviour
         StopRecording();
     }
 
-    private void StopRecording()
+    // 외부에서 호출할 수 있도록 public으로 설정
+    public void StopRecording()
     {
         if (videoCapture == null)
         {
@@ -190,7 +193,6 @@ public class RecordButtonHandler : MonoBehaviour
 
         try
         {
-            // Android의 MediaScannerConnection을 사용해 갤러리에 비디오 파일을 등록
             using (AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
             {
                 AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
@@ -209,7 +211,6 @@ public class RecordButtonHandler : MonoBehaviour
             Debug.LogError("갤러리에 비디오 파일을 저장하는 중 오류 발생: " + e.Message);
         }
     }
-
 
     private void OnStoppedVideoCaptureMode(NRVideoCapture.VideoCaptureResult result)
     {
@@ -243,7 +244,7 @@ public class RecordButtonHandler : MonoBehaviour
 
     public void OnRecordButtonClicked()
     {
-        if (videoCapture == null)
+        if (!isVideoCaptureInitialized)
         {
             Debug.LogError("NRVideoCapture 인스턴스가 초기화되지 않았습니다.");
             return;

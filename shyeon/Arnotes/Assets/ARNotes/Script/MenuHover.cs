@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using NRKernal;
+using Unity.VisualScripting;
 
 public class MenuHover : MonoBehaviour
 {
@@ -47,7 +48,12 @@ public class MenuHover : MonoBehaviour
         Vector3 screenPoint = nrealCamera.WorldToScreenPoint(pose.position);
         Vector2 pointerScreenPos = new Vector2(screenPoint.x, screenPoint.y);
 
-        if (thickButtons[0].activeSelf) // 하위 메뉴가 켜지면
+        if(targetImage.name == "record")
+        {
+            Debug.Log("record-image 호출");
+        }
+
+        if (thickButtons[0].activeSelf && targetImage.name != "record") // 하위 메뉴가 켜지면
         {
             if (currentImage != null && currentImage != targetImage)
             { HideThickButtonsUnderImage(currentImage); }
