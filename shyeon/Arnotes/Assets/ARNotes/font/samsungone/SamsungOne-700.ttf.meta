@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 1f07f8953cb60c7459227dcb6852a1a0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - SamsungOne
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: bd7d9171da3c9264587a0d4b2c05b0e9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
