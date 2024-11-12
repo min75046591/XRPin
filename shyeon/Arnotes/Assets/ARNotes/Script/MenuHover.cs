@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using NRKernal;
 using Unity.VisualScripting;
+using LitJson;
 
 public class MenuHover : MonoBehaviour
 {
@@ -24,11 +25,17 @@ public class MenuHover : MonoBehaviour
     private Color recordingColor = Color.red; // 녹화 중일 때의 색상
     private Vector3 initialSize = new Vector3(1.0f, 1.0f, 1.0f);
     private Vector3 scaledSize = new Vector3(1.2f, 1.2f, 1.2f);
+    public SaveLineRenderer saveLineRenderer;
+    public JsonManager jsonManager;
+    public MainController mainController;
 
     private float hoverTimer = 0f;
     private bool isHovering = false;
     private GameObject currentHoveredButton = null;
     private float buttonHoverTimer = 0f;
+
+    private static Pin currentPin;
+
 
     void Start()
     {
@@ -62,6 +69,10 @@ public class MenuHover : MonoBehaviour
         {
             CheckNoHover(pointerScreenPos);
         }
+        else if (thickButtons.Length == 0)
+        {
+            CheckNoHover(pointerScreenPos);
+        }
         else
         {
             CheckHoverOnPanel(pointerScreenPos);
@@ -78,6 +89,14 @@ public class MenuHover : MonoBehaviour
             hoverTimer += Time.deltaTime;
             if (hoverTimer >= hoverTime)
             {
+                Debug.Log(targetImage.transform.localScale);
+                //if (currentImage != null && currentImage != targetImage)
+                //{
+                //    hoverTimer -= Time.deltaTime * 3f;
+                //    if (hoverTimer <= 0) hoverTimer = 0;
+                //    HideThickButtonsUnderImage(currentImage);
+                //}
+                //hoverTimer = 0;
                 ShowThickButtons();
                 if (currentImage == null)
                 {
@@ -96,7 +115,6 @@ public class MenuHover : MonoBehaviour
     {
         targetImage.transform.localScale = Vector3.Lerp(initialSize, scaledSize, hoverTimer * 3f);
         isHovering = RectTransformUtility.RectangleContainsScreenPoint(panelRectTransform, pointerScreenPos, nrealCamera);
-
         if (RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
         {
             hoverTimer += Time.deltaTime;
@@ -213,5 +231,11 @@ public class MenuHover : MonoBehaviour
         {
             button.SetActive(false);
         }
+    }
+
+    public static void PassPin(Pin pin)
+    {
+        currentPin = pin;
+        Debug.Log(pin.GetPinName());
     }
 }

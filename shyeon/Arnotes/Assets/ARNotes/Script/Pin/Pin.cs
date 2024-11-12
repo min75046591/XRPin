@@ -1,12 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pin : MonoBehaviour
+[System.Serializable]
+public class Pin
 {
-    private string pinName; // timestamp·Î
-    private string videoPath;
-    private List<LineObject> memo;
+    [SerializeField] private Vector3 pinPoint;
+    [SerializeField] private string pinName; // timestamp·Î
+    [SerializeField] private string videoPath;
+    [SerializeField] private List<LineObject> memo = new List<LineObject>();
 
     public Pin (string pinName)
     {
@@ -17,5 +20,25 @@ public class Pin : MonoBehaviour
     public string GetPinName()
     {
         return this.pinName;
+    }
+
+    public void AddLine(LineObject line)
+    {
+        this.memo.Add(line);
+    }
+
+    public void SetMemos(List<LineObject> lines)
+    {
+        this.memo = lines;
+    }
+
+    public void SetPinPoint(Vector3 p)
+    {
+        this.pinPoint = p;
+    }
+
+    public Vector3 GetPinPoint()
+    {
+        return this.pinPoint;
     }
 }
