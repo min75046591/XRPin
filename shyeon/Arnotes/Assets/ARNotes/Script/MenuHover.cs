@@ -18,15 +18,17 @@ public class MenuHover : MonoBehaviour
     public float speed = 1f;
     public Image SubTargetImage;
 
+    public RecordHandler recordHandler;
+    private bool isRecording = false;
+    private Color originalTargetColor;
+    private Color recordingColor = Color.red; // 녹화 중일 때의 색상
+    private Vector3 initialSize = new Vector3(1.0f, 1.0f, 1.0f);
+    private Vector3 scaledSize = new Vector3(1.2f, 1.2f, 1.2f);
 
     private float hoverTimer = 0f;
     private bool isHovering = false;
     private GameObject currentHoveredButton = null;
     private float buttonHoverTimer = 0f;
-    private Color originalTargetColor;
-    private Vector3 initialSize = new Vector3(1.0f, 1.0f, 1.0f);
-    private Vector3 scaledSize = new Vector3(1.2f, 1.2f, 1.2f);
-
 
     void Start()
     {
@@ -36,7 +38,6 @@ public class MenuHover : MonoBehaviour
             originalTargetColor = targetImage.color;
         }
     }
-
 
     void Update()
     {
@@ -49,20 +50,21 @@ public class MenuHover : MonoBehaviour
         Vector3 screenPoint = nrealCamera.WorldToScreenPoint(pose.position);
         Vector2 pointerScreenPos = new Vector2(screenPoint.x, screenPoint.y);
 
-        if(targetImage.name == "record")
-        {
-            Debug.Log("record-image 호출");
-        }
-
-        if (thickButtons[0].activeSelf && targetImage.name != "record") // 하위 메뉴가 켜지면
+        if (targetImage.name != "record" && targetImage.name != "save" && targetImage.name != "cancel" && thickButtons.Length != 0 && thickButtons[0].activeSelf)
         {
             if (currentImage != null && currentImage != targetImage)
-            { HideThickButtonsUnderImage(currentImage); }
-            CheckHoverOnThickButtons(pointerScreenPos); // 하위메뉴를 선택하는 창 관리
+            {
+                HideThickButtonsUnderImage(currentImage);
+            }
+            CheckHoverOnThickButtons(pointerScreenPos);
+        }
+        else if (thickButtons.Length == 0)
+        {
+            CheckNoHover(pointerScreenPos);
         }
         else
         {
-            CheckHoverOnPanel(pointerScreenPos); // 상위 메뉴를 여는 창
+            CheckHoverOnPanel(pointerScreenPos);
         }
     }
 
@@ -70,31 +72,66 @@ public class MenuHover : MonoBehaviour
     {
         targetImage.transform.localScale = Vector3.Lerp(initialSize, scaledSize, hoverTimer * 3f);
         isHovering = RectTransformUtility.RectangleContainsScreenPoint(panelRectTransform, pointerScreenPos, nrealCamera);
-        //if (isHovering && RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
+
         if (RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
         {
             hoverTimer += Time.deltaTime;
             if (hoverTimer >= hoverTime)
             {
-                Debug.Log(targetImage.transform.localScale);
-                //if (currentImage != null && currentImage != targetImage)
-                //{
-                //    hoverTimer -= Time.deltaTime * 3f;
-                //    if (hoverTimer <= 0) hoverTimer = 0;
-                //    HideThickButtonsUnderImage(currentImage);
-                //}
-                hoverTimer = 0;
                 ShowThickButtons();
                 if (currentImage == null)
-                { currentImage = targetImage; }
+                {
+                    currentImage = targetImage;
+                }
             }
         }
         else
         {
             hoverTimer = 0;
-            //hoverTimer -= Time.deltaTime * 3f;
-            //if (hoverTimer <= 0) hoverTimer = 0;
             HideThickButtons();
+        }
+    }
+
+    void CheckNoHover(Vector2 pointerScreenPos)
+    {
+        targetImage.transform.localScale = Vector3.Lerp(initialSize, scaledSize, hoverTimer * 3f);
+        isHovering = RectTransformUtility.RectangleContainsScreenPoint(panelRectTransform, pointerScreenPos, nrealCamera);
+
+        if (RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
+        {
+            hoverTimer += Time.deltaTime;
+            if (hoverTimer >= hoverTime)
+            {
+                if (currentImage == null)
+                {
+                    currentImage = targetImage;
+                }
+
+                if (targetImage.name == "record")
+                {
+                    if (!isRecording)
+                    {
+                        //string recordVideoSavePath 
+                        isRecording = true;
+                        recordHandler.StartRecording();
+                        //빨간색으로 바꾸는 로직 추가
+                    }
+                    else if (isRecording)
+                    {
+                        isRecording = false;
+                        recordHandler.StopRecording(); // 녹화 중지
+                        //원래 색으로 바꾸는 로직 추가 
+                        Debug.Log("녹화 중지");
+                    }
+
+                    // 한번 실행 후 일정 시간 대기
+                    hoverTimer = 0;
+                }
+            }
+        }
+        else
+        {
+            hoverTimer = 0;
         }
     }
 
@@ -117,8 +154,6 @@ public class MenuHover : MonoBehaviour
 
                 if (buttonHoverTimer >= buttonHoverTime)
                 {
-                    Debug.Log(button);
-                    ResetColor(SubTargetImage, originalTargetColor);
                     menuCommander.Command(button.name);
                     HideThickButtons();
                 }
@@ -147,7 +182,6 @@ public class MenuHover : MonoBehaviour
         {
             button.SetActive(false);
         }
-        //hoverTimer = 0f;
         buttonHoverTimer = 0f;
         currentHoveredButton = null;
         isHovering = false;

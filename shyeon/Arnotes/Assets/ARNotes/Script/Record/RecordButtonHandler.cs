@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 using NRKernal.Record;
 using NRKernal;
 using System.IO;
@@ -11,8 +10,6 @@ using UnityEngine.Android;
 
 public class RecordButtonHandler : MonoBehaviour
 {
-    public TextMeshProUGUI buttonText;
-    public Button recordButton;
     private NRVideoCapture videoCapture;
     public NRPreviewer previewer;
     private bool isRecording = false;
@@ -21,7 +18,6 @@ public class RecordButtonHandler : MonoBehaviour
 
     private void Start()
     {
-        RequestStoragePermission();
         Initialize();
     }
 
@@ -35,16 +31,7 @@ public class RecordButtonHandler : MonoBehaviour
 
     private void Initialize()
     {
-        if (buttonText == null || recordButton == null)
-        {
-            Debug.LogError("RecordButtonHandler: 필요한 컴포넌트가 설정되지 않았습니다.");
-            return;
-        }
-
-        buttonText.text = "Start";
-
-        recordButton.onClick.RemoveListener(OnRecordButtonClicked);
-        recordButton.onClick.AddListener(OnRecordButtonClicked);
+        RequestStoragePermission();
 
         NRVideoCapture.CreateAsync(false, captureObject =>
         {
@@ -78,13 +65,6 @@ public class RecordButtonHandler : MonoBehaviour
         }
     }
 
-    private IEnumerator StartRecordingWithDelay()
-    {
-        yield return new WaitForSeconds(0.5f);
-        StartRecording();
-    }
-
-    // 외부에서 호출할 수 있도록 public으로 설정
     public void StartRecording()
     {
         if (!isVideoCaptureInitialized || videoCapture == null || isRecording || isProcessing)
@@ -94,7 +74,6 @@ public class RecordButtonHandler : MonoBehaviour
         }
 
         isProcessing = true;
-        recordButton.interactable = false;
 
         CameraParameters cameraParameters = new CameraParameters
         {
@@ -117,7 +96,6 @@ public class RecordButtonHandler : MonoBehaviour
         {
             Debug.LogError("비디오 모드 설정에 실패했습니다.");
             isProcessing = false;
-            recordButton.interactable = true;
             return;
         }
 
@@ -130,13 +108,6 @@ public class RecordButtonHandler : MonoBehaviour
         }
     }
 
-    private IEnumerator StopRecordingWithDelay()
-    {
-        yield return new WaitForSeconds(0.5f);
-        StopRecording();
-    }
-
-    // 외부에서 호출할 수 있도록 public으로 설정
     public void StopRecording()
     {
         if (videoCapture == null)
@@ -158,7 +129,6 @@ public class RecordButtonHandler : MonoBehaviour
         }
 
         isProcessing = true;
-        recordButton.interactable = false;
         videoCapture.StopRecordingAsync(OnRecordingStopped);
     }
 
@@ -168,8 +138,6 @@ public class RecordButtonHandler : MonoBehaviour
         {
             Debug.Log("녹화를 중지합니다.");
             isRecording = false;
-            buttonText.text = "Start";
-
             string savedPath = VideoSavePath;
             SaveVideoToGallery(savedPath);
         }
@@ -179,7 +147,6 @@ public class RecordButtonHandler : MonoBehaviour
         }
 
         isProcessing = false;
-        recordButton.interactable = true;
         videoCapture.StopVideoModeAsync(OnStoppedVideoCaptureMode);
     }
 
@@ -228,7 +195,6 @@ public class RecordButtonHandler : MonoBehaviour
     {
         if (result.success)
         {
-            buttonText.text = "Stop";
             isRecording = true;
             Debug.Log("녹화를 시작합니다.");
         }
@@ -239,33 +205,11 @@ public class RecordButtonHandler : MonoBehaviour
         }
 
         isProcessing = false;
-        recordButton.interactable = true;
     }
 
-    public void OnRecordButtonClicked()
+    public bool IsRecording()
     {
-        if (!isVideoCaptureInitialized)
-        {
-            Debug.LogError("NRVideoCapture 인스턴스가 초기화되지 않았습니다.");
-            return;
-        }
-
-        if (isProcessing)
-        {
-            Debug.LogWarning("이전 녹화 작업이 완료되지 않았습니다.");
-            return;
-        }
-
-        if (isRecording)
-        {
-            Debug.Log("사용자 요청으로 녹화 중지 시도.");
-            StartCoroutine(StopRecordingWithDelay());
-        }
-        else
-        {
-            Debug.Log("사용자 요청으로 녹화 시작 시도.");
-            StartCoroutine(StartRecordingWithDelay());
-        }
+        return isRecording;
     }
 
     private void OnDestroy()
@@ -278,11 +222,6 @@ public class RecordButtonHandler : MonoBehaviour
             }
 
             videoCapture.Dispose();
-        }
-
-        if (recordButton != null)
-        {
-            recordButton.onClick.RemoveListener(OnRecordButtonClicked);
         }
     }
 }
