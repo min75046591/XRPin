@@ -6,13 +6,24 @@ using UnityEngine;
 [System.Serializable]
 public class LineObject
 {
-    [SerializeField] private List<Point> points = new List<Point>();
-    [SerializeField] private float lineWidth;
-    [SerializeField] private Color color;
+    [SerializeField]  private List<Vector3> Points;
+    [SerializeField]  private Color Color;
+    [SerializeField]  private float Width;
     
+
+    public LineObject(List<Vector3> Points, Color Color, float Width)
+    {
+        this.Points = Points;
+        this.Color = Color;
+        this.Width = Width;
+    }
 
     public void AddPoint(float x, float y, float z)
     {
-        this.points.Add(new Point(x, y, z));
+        this.Points.Add(new Vector3(x, y, z));
+    }
+    public void AddPoint(Vector3 point)
+    {
+        this.Points.Add(point);
     }
 }

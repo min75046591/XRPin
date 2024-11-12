@@ -19,6 +19,8 @@ public class MenuHover : MonoBehaviour
     public float speed = 1f;
     public Image SubTargetImage;
     public SaveLineRenderer saveLineRenderer;
+    public JsonManager jsonManager;
+    public MainController mainController;
 
     private float hoverTimer = 0f;
     private bool isHovering = false;
@@ -27,6 +29,9 @@ public class MenuHover : MonoBehaviour
     private Color originalTargetColor;
     private Vector3 initialSize = new Vector3(1.0f, 1.0f, 1.0f);
     private Vector3 scaledSize = new Vector3(1.2f, 1.2f, 1.2f);
+
+
+    private static Pin currentPin;
 
 
     void Start()
@@ -117,8 +122,10 @@ public class MenuHover : MonoBehaviour
                         break;
                     case "save":
                         Debug.Log("##############################");
-                        string jsonData = saveLineRenderer.GetJsonData(); // JSON 데이터 가져오기
-                        Debug.Log("JSON Data: " + jsonData);
+                        currentPin.SetMemos(saveLineRenderer.GetLineObject()); // JSON 데이터 가져오기
+                        jsonManager.Save(currentPin);
+                        mainController.EnablePinGenerationMode();
+                        mainController.DisableCreateUserInterface();
                         //Debug.Log("save 버튼 호출");
                         break;
                     case "cancel":
@@ -215,5 +222,11 @@ public class MenuHover : MonoBehaviour
         {
             button.SetActive(false);
         }
+    }
+
+    public static void PassPin(Pin pin)
+    {
+        currentPin = pin;
+        Debug.Log(pin.GetPinName());
     }
 }

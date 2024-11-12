@@ -6,7 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public class Pin
 {
-    [SerializeField] private Point pinPoint;
+    [SerializeField] private Vector3 pinPoint;
     [SerializeField] private string pinName; // timestamp·Î
     [SerializeField] private string videoPath;
     [SerializeField] private List<LineObject> memo = new List<LineObject>();
@@ -27,13 +27,18 @@ public class Pin
         this.memo.Add(line);
     }
 
-    public void SetPinPoint(Vector3 p)
+    public void SetMemos(List<LineObject> lines)
     {
-        this.pinPoint = new Point(p);
+        this.memo = lines;
     }
 
-    public Vector3 PinPointtoVector3()
+    public void SetPinPoint(Vector3 p)
     {
-        return pinPoint.PointToVector3();
+        this.pinPoint = p;
+    }
+
+    public Vector3 GetPinPoint()
+    {
+        return this.pinPoint;
     }
 }

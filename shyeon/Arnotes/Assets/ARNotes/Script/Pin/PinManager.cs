@@ -20,7 +20,7 @@ public class PinManager : MonoBehaviour
 
    public void DisplayPin(Pin pin)
     {
-        pinTransform.position = pin.PinPointtoVector3();
+        pinTransform.position = pin.GetPinPoint();
         GameObject newPin = Instantiate(pinPrefab, pinTransform);
         newPin.SetActive(true);
         newPin.transform.SetParent(null);

@@ -8,10 +8,14 @@ public class MainController : MonoBehaviour
     public HandEnum handEnum;
     public PinManager pinManager;
     public GameObject pinManagerGameObject;
-    public JsonManager jsonManager;
+    public JsonManager jsonManager; 
+    public GameObject createUserInterface;
 
+    private MenuHover menuHover = new MenuHover();
     private HandGesture prevGesture;
     private List<Pin> currentLoadedPin = new List<Pin>();
+
+    private bool pinGenerationMode = true;
 
 
     void Start()
@@ -27,7 +31,7 @@ public class MainController : MonoBehaviour
     {
         if (!NRInput.Hands.IsRunning) return;
         var handState = NRInput.Hands.GetHandState(handEnum);
-        JudgePinGeneration(handState);
+        if(pinGenerationMode) JudgePinGeneration(handState);
         this.prevGesture = handState.currentGesture;
     }
     private void JudgePinGeneration(HandState handState)
@@ -38,10 +42,31 @@ public class MainController : MonoBehaviour
             var pose = handState.GetJointPose(HandJointID.IndexTip);
             Vector3 indexTipPosition = pose.position;
             Pin pin = pinManager.GeneratePin(indexTipPosition);
-            LineObject line = new LineObject();
             this.currentLoadedPin.Add(pin);
-            this.pinManagerGameObject.SetActive(false);
-            this.jsonManager.Save(pin);
+            this.DisablePinGenerationMode();
+            this.EnableCreateUserInterface();
+            MenuHover.PassPin(pin);
+
         }
+    }
+
+    public void EnablePinGenerationMode()
+    {
+        this.pinGenerationMode = true;
+    }
+
+    public void DisablePinGenerationMode()
+    {
+        this.pinGenerationMode = false;
+    }
+
+    public void EnableCreateUserInterface()
+    {
+        createUserInterface.SetActive(true);
+    }
+
+    public void DisableCreateUserInterface()
+    {
+        createUserInterface.SetActive(false);
     }
 }
