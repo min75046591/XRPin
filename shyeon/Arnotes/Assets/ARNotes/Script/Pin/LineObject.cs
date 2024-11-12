@@ -1,11 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LineObject : MonoBehaviour
+[System.Serializable]
+public class LineObject
 {
-    private List<Point> points;
-    private float lineWidth;
-    private string color;
+    [SerializeField] private List<Point> points = new List<Point>();
+    [SerializeField] private float lineWidth;
+    [SerializeField] private Color color;
     
+
+    public void AddPoint(float x, float y, float z)
+    {
+        this.points.Add(new Point(x, y, z));
+    }
 }
