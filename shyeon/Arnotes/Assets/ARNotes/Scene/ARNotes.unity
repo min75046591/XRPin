@@ -368,6 +368,8 @@ MonoBehaviour:
   speed: 1
   SubTargetImage: {fileID: 741213864}
   saveLineRenderer: {fileID: 0}
+  jsonManager: {fileID: 1559568191}
+  mainController: {fileID: 0}
 --- !u!1 &71122121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7814339322770408160, guid: 78b4170c2916dac42a6b45d9cfa5ba68, type: 3}
@@ -728,6 +730,8 @@ MonoBehaviour:
   speed: 1
   SubTargetImage: {fileID: 1811378911}
   saveLineRenderer: {fileID: 0}
+  jsonManager: {fileID: 0}
+  mainController: {fileID: 0}
 --- !u!1 &186362062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,6 +1700,8 @@ MonoBehaviour:
   speed: 1
   SubTargetImage: {fileID: 402177731}
   saveLineRenderer: {fileID: 0}
+  jsonManager: {fileID: 0}
+  mainController: {fileID: 0}
 --- !u!114 &496415781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1839,10 +1845,10 @@ RectTransform:
   - {fileID: 1592360609}
   m_Father: {fileID: 1257029742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 400, y: -70}
+  m_SizeDelta: {x: 130, y: 120}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &560040168
 MonoBehaviour:
@@ -1906,6 +1912,8 @@ MonoBehaviour:
   speed: 1
   SubTargetImage: {fileID: 501156431}
   saveLineRenderer: {fileID: 560040171}
+  jsonManager: {fileID: 1559568191}
+  mainController: {fileID: 996640685}
 --- !u!114 &560040171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2082,6 +2090,8 @@ MonoBehaviour:
   speed: 1
   SubTargetImage: {fileID: 243338946}
   saveLineRenderer: {fileID: 0}
+  jsonManager: {fileID: 0}
+  mainController: {fileID: 0}
 --- !u!1 &663064547
 GameObject:
   m_ObjectHideFlags: 0
@@ -2736,7 +2746,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8857288796944335900}
   - {fileID: 663064548}
   - {fileID: 1559568190}
   - {fileID: 71122122}
@@ -2758,6 +2767,7 @@ MonoBehaviour:
   pinManager: {fileID: 663064549}
   pinManagerGameObject: {fileID: 663064547}
   jsonManager: {fileID: 1559568191}
+  createUserInterface: {fileID: 991498165}
 --- !u!1 &1044585942
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,7 +3481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1257029742
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3701,11 +3711,11 @@ Transform:
   m_GameObject: {fileID: 1347547984}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalPosition: {x: -933.5, y: -442.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1605601935}
+  m_Father: {fileID: 1660068708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1347547986
 MonoBehaviour:
@@ -4434,6 +4444,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1257029742}
+  - {fileID: 8857288796944335900}
+  - {fileID: 1347547985}
   m_Father: {fileID: 991498166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6775,9 +6787,6 @@ PrefabInstance:
       addedObject: {fileID: 1996375024}
     - targetCorrespondingSourceObject: {fileID: 4405257463153130, guid: 7f0032a8f9796bb418c31cdb8c16b78e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1347547985}
-    - targetCorrespondingSourceObject: {fileID: 4405257463153130, guid: 7f0032a8f9796bb418c31cdb8c16b78e, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1780973139}
     - targetCorrespondingSourceObject: {fileID: 4405257463153130, guid: 7f0032a8f9796bb418c31cdb8c16b78e, type: 3}
       insertIndex: -1
@@ -6914,7 +6923,7 @@ Transform:
   m_GameObject: {fileID: 7270344204156491517}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -933.5, y: -442.5, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6926,7 +6935,7 @@ Transform:
   - {fileID: 6729400405097355886}
   - {fileID: 1044585944}
   - {fileID: 1390457756}
-  m_Father: {fileID: 996640684}
+  m_Father: {fileID: 1660068708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
