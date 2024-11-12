@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using NRKernal;
 using Unity.VisualScripting;
+using LitJson;
 
 public class MenuHover : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class MenuHover : MonoBehaviour
     public GameObject[] thickButtons;
     public float speed = 1f;
     public Image SubTargetImage;
-
+    public SaveLineRenderer saveLineRenderer;
 
     private float hoverTimer = 0f;
     private bool isHovering = false;
@@ -49,16 +50,15 @@ public class MenuHover : MonoBehaviour
         Vector3 screenPoint = nrealCamera.WorldToScreenPoint(pose.position);
         Vector2 pointerScreenPos = new Vector2(screenPoint.x, screenPoint.y);
 
-        if(targetImage.name == "record")
-        {
-            Debug.Log("record-image 호출");
-        }
-
-        if (thickButtons[0].activeSelf && targetImage.name != "record") // 하위 메뉴가 켜지면
+        if (targetImage.name != "record" && targetImage.name != "save" && targetImage.name != "cancel" && thickButtons.Length != 0 && thickButtons[0].activeSelf) // 하위 메뉴가 켜지면
         {
             if (currentImage != null && currentImage != targetImage)
             { HideThickButtonsUnderImage(currentImage); }
             CheckHoverOnThickButtons(pointerScreenPos); // 하위메뉴를 선택하는 창 관리
+        }
+        else if (thickButtons.Length == 0)
+        {
+            CheckNoHover(pointerScreenPos);
         }
         else
         {
@@ -83,7 +83,7 @@ public class MenuHover : MonoBehaviour
                 //    if (hoverTimer <= 0) hoverTimer = 0;
                 //    HideThickButtonsUnderImage(currentImage);
                 //}
-                hoverTimer = 0;
+                //hoverTimer = 0;
                 ShowThickButtons();
                 if (currentImage == null)
                 { currentImage = targetImage; }
@@ -95,6 +95,42 @@ public class MenuHover : MonoBehaviour
             //hoverTimer -= Time.deltaTime * 3f;
             //if (hoverTimer <= 0) hoverTimer = 0;
             HideThickButtons();
+        }
+    }
+
+    void CheckNoHover(Vector2 pointerScreenPos)
+    {
+        targetImage.transform.localScale = Vector3.Lerp(initialSize, scaledSize, hoverTimer * 3f);
+        isHovering = RectTransformUtility.RectangleContainsScreenPoint(panelRectTransform, pointerScreenPos, nrealCamera);
+        if (RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
+        {
+            hoverTimer += Time.deltaTime;
+            if (hoverTimer >= hoverTime)
+            {
+                if (currentImage == null)
+                { currentImage = targetImage; }
+
+                switch (targetImage.name)
+                {
+                    case "record":
+                        Debug.Log("record 버튼 호출");
+                        break;
+                    case "save":
+                        Debug.Log("##############################");
+                        string jsonData = saveLineRenderer.GetJsonData(); // JSON 데이터 가져오기
+                        Debug.Log("JSON Data: " + jsonData);
+                        //Debug.Log("save 버튼 호출");
+                        break;
+                    case "cancel":
+                        Debug.Log("cancel 버튼 호출");
+                        break;
+                }
+            }
+        }
+        else
+        {
+            hoverTimer = 0;
+            //HideThickButtons();
         }
     }
 
