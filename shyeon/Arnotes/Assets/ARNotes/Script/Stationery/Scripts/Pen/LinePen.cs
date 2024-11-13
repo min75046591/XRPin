@@ -32,6 +32,8 @@ public class LinePen : BasePen
         Draw(pos);   
     }
 
+
+
     public override void StopDraw()
     {
         if (m_LineRendererObj)
