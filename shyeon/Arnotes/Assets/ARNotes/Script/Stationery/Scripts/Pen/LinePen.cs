@@ -77,5 +77,20 @@ public class LinePen : BasePen
         m_LineRenderer.positionCount = m_WorldPosList.Count;
         m_LineRenderer.SetPositions(m_WorldPosList.ToArray());
     }
+    public void DisplayLine(List<Vector3> positions)
+    {
+        if (m_LineRendererObj == null)
+        {
+            CreateColoredLine();
+        }
+
+        foreach (Vector3 pos in positions)
+        {
+            if (m_WorldPosList.Count > 1 && Vector3.Distance(pos, m_WorldPosList[m_WorldPosList.Count - 1]) < MIN_LINE_SEGMENT)
+                return;
+
+            Draw(pos);
+        }
+    }
 
 }
