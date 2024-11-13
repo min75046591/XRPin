@@ -7,9 +7,9 @@ public class MainController : MonoBehaviour
 {
     public HandEnum handEnum;
     public PinManager pinManager;
-    public GameObject pinManagerGameObject;
     public JsonManager jsonManager; 
     public GameObject createUserInterface;
+    public InterfaceToggle toggle;
 
     private MenuHover menuHover = new MenuHover();
     private HandGesture prevGesture;
@@ -62,6 +62,7 @@ public class MainController : MonoBehaviour
 
     public void EnableCreateUserInterface()
     {
+        toggle.InitializeToggle();
         createUserInterface.SetActive(true);
     }
 

@@ -125,31 +125,45 @@ public class MenuHover : MonoBehaviour
                 {
                     currentImage = targetImage;
                 }
-
-                if (targetImage.name == "record")
+                switch (targetImage.name)
                 {
-                    if (!isRecording)
-                    {
-                        //string recordVideoSavePath 
-                        isRecording = true;
-                        recordHandler.StartRecording();
+                    case "record":
+                        if (!isRecording)
+                        {
+                            //string recordVideoSavePath 
+                            isRecording = true;
+                            recordHandler.StartRecording();
 
-                        string videoPath = recordHandler.recordButtonHandler.VideoSavePath;
-                        Debug.Log(videoPath);
-                        currentPin.setVideoPath(videoPath);
-                        
-                        //빨간색으로 바꾸는 로직 추가
-                    }
-                    else if (isRecording)
-                    {
-                        isRecording = false;
-                        recordHandler.StopRecording(); // 녹화 중지
-                        //원래 색으로 바꾸는 로직 추가 
-                        Debug.Log("녹화 중지");
-                    }
+                            string videoPath = recordHandler.recordButtonHandler.VideoSavePath;
+                            Debug.Log(videoPath);
+                            currentPin.setVideoPath(videoPath);
+                            
+                            //빨간색으로 바꾸는 로직 추가
+                        }
+                        else if (isRecording)
+                        {
+                            isRecording = false;
+                            recordHandler.StopRecording(); // 녹화 중지
+                            //원래 색으로 바꾸는 로직 추가 
+                            Debug.Log("녹화 중지");
+                        }
 
-                    // 한번 실행 후 일정 시간 대기
-                    hoverTimer = 0;
+                        // 한번 실행 후 일정 시간 대기
+                        hoverTimer = 0;                    
+                        Debug.Log("record 버튼 호출");
+                        break;
+                    case "save":
+                        Debug.Log("##############################");
+                        currentPin.SetMemos(saveLineRenderer.GetLineObject()); // JSON 데이터 가져오기
+                        jsonManager.Save(currentPin);
+                        menuCommander.Command(targetImage.name);
+                        mainController.EnablePinGenerationMode();
+                        mainController.DisableCreateUserInterface();
+                        //Debug.Log("save 버튼 호출");
+                        break;
+                    case "cancel":
+                        Debug.Log("cancel 버튼 호출");
+                        break;
                 }
             }
         }

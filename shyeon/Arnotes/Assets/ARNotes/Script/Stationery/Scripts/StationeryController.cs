@@ -40,7 +40,7 @@ public class StationeryController : MonoBehaviour
     public float modeSwitchCooldown = 1.0f;
 
 
-    void Start()
+    void Awake()
     {
         // initialize Pen
         this.SetPenCtrl(ThreeDPenCtrl);
@@ -302,5 +302,10 @@ public class StationeryController : MonoBehaviour
     {
         this.drawingMode = !this.drawingMode;
         this.removingMode = !this.removingMode;
+    }
+
+    public void RemoveAll()
+    {
+        this.CurrentEraserController.RemoveAll();
     }
 }

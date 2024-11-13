@@ -12,11 +12,11 @@ public class InterfaceToggle : MonoBehaviour
     private bool isPanelOpen = false; // 패널의 초기 상태
     private bool wasPinching = false; // 이전 프레임에서 Pinch 상태였는지 추적
 
+
     void Update()
     {
         if (!NRInput.Hands.IsRunning)
             return;
-
         var handState = NRInput.Hands.GetHandState(handEnum);
 
         // Pinch 제스처가 처음 발생했을 때만 토글
@@ -27,9 +27,16 @@ public class InterfaceToggle : MonoBehaviour
             panel.SetActive(isPanelOpen);
             stationeryContrller.SetActive(!isPanelOpen);
             UICursor.SetActive(isPanelOpen);
+            Debug.Log("panel: " + isPanelOpen);
+            Debug.Log("stationery: " + !isPanelOpen);
         }
 
         // 현재 Pinch 상태를 wasPinching에 업데이트
         wasPinching = (handState.currentGesture == HandGesture.Pinch);
+    }
+
+    public void InitializeToggle()
+    {
+        this.isPanelOpen = false;
     }
 }

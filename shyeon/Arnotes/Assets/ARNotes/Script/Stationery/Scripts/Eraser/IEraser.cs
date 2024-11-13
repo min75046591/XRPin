@@ -7,4 +7,5 @@ public interface IEraser
     public abstract void StartRemoving();
     public abstract void ChangeCircleDiameter(float diameter);
     Transform EraserTransform { get; }
+    public abstract void RemoveAll();
 }

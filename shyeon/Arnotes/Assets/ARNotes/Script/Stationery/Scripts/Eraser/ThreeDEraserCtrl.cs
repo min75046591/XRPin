@@ -33,4 +33,8 @@ public class ThreeDEraserCtrl : BaseEraserCtrl
         baseEraser.ChangeCircleDiameter(diameter);
     }
 
+    public override void RemoveAll()
+    {
+        baseEraser.RemoveAll();
+    }
 }

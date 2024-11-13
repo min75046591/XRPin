@@ -56,5 +56,14 @@ public class LineEraser : BaseEraser
         return Vector3.Distance(point, closestPoint);
     }
 
+    public override void RemoveAll()
+    {
+        List<LineRenderer> lineRenderers = lineRendererHolder.GetLineRenderers();
+        for (int i = lineRenderers.Count - 1; i >= 0; i--)
+        {
+            Destroy(lineRenderers[i].gameObject);
+        }
+        lineRenderers.Clear();
+    }
 
 }

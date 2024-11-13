@@ -34,4 +34,9 @@ public class TwoDEraserCtrl : BaseEraserCtrl
         baseEraser.ChangeCircleDiameter(diameter);
     }
 
+    public override void RemoveAll()
+    {
+        baseEraser.RemoveAll();
+    }
+
 }

@@ -9,4 +9,5 @@ public interface IEraserCtrl
     public abstract void SelectEraser(BaseEraser eraser);
     public abstract void StartRemoving();
     public abstract void ChangeCircleDiameter(float diameter);
+    public abstract void RemoveAll();
 }
