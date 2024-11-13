@@ -36,8 +36,8 @@ namespace NRKernal.NRExamples
 
         List<string> _RendermodeOptions = new List<string>() {
             BlendMode.Blend.ToString(),
-            BlendMode.RGBOnly.ToString(),
-            BlendMode.VirtualOnly.ToString()
+            //BlendMode.RGBOnly.ToString(),
+            //BlendMode.VirtualOnly.ToString()
         };
 
         //List<string> _AudioStateOptions = new List<string>() {
