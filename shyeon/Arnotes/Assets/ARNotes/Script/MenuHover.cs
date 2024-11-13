@@ -78,6 +78,7 @@ public class MenuHover : MonoBehaviour
             CheckHoverOnPanel(pointerScreenPos);
         }
     }
+    
 
     void CheckHoverOnPanel(Vector2 pointerScreenPos)
     {
@@ -132,6 +133,11 @@ public class MenuHover : MonoBehaviour
                         //string recordVideoSavePath 
                         isRecording = true;
                         recordHandler.StartRecording();
+
+                        string videoPath = recordHandler.recordButtonHandler.VideoSavePath;
+                        Debug.Log(videoPath);
+                        currentPin.setVideoPath(videoPath);
+                        
                         //빨간색으로 바꾸는 로직 추가
                     }
                     else if (isRecording)

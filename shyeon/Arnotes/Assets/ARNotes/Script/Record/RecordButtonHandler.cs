@@ -15,6 +15,8 @@ public class RecordButtonHandler : MonoBehaviour
     private bool isRecording = false;
     private bool isProcessing = false;
     private bool isVideoCaptureInitialized = false; // 초기화 상태 플래그
+    private string videoSavePath;
+
 
     private void Start()
     {
@@ -48,20 +50,21 @@ public class RecordButtonHandler : MonoBehaviour
         });
     }
 
-    private string VideoSavePath
+    public string VideoSavePath
     {
         get
         {
-            string timeStamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-            string filename = $"Record_Video_{timeStamp}.mp4";
-            string folderPath = "/storage/emulated/0/Movies/Record";
-
-            if (!Directory.Exists(folderPath))
-            {
-                Directory.CreateDirectory(folderPath);
+            if (string.IsNullOrEmpty(videoSavePath))
+            {   
+                string timeStamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                string filename = $"VID_{timeStamp}.mp4";
+                videoSavePath = Path.Combine(Application.persistentDataPath, filename);
             }
-
-            return Path.Combine(folderPath, filename);
+            return videoSavePath;
+        }
+        set
+        {
+            videoSavePath = value;
         }
     }
 

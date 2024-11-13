@@ -27,6 +27,16 @@ public class Pin
         this.memo.Add(line);
     }
 
+    public string getVideoPaths()
+    {
+        return this.videoPath;
+    }
+
+    public void setVideoPath(string videoPath)
+    {
+        this.videoPath = videoPath;
+    }
+
     public void SetMemos(List<LineObject> lines)
     {
         this.memo = lines;

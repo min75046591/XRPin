@@ -1750,10 +1750,10 @@ MonoBehaviour:
   - {fileID: 342583640}
   speed: 1
   SubTargetImage: {fileID: 402177731}
-  recordHandler: {fileID: 0}
-  saveLineRenderer: {fileID: 0}
-  jsonManager: {fileID: 0}
-  mainController: {fileID: 0}
+  recordHandler: {fileID: 790273858}
+  saveLineRenderer: {fileID: 560040171}
+  jsonManager: {fileID: 1559568191}
+  mainController: {fileID: 996640685}
 --- !u!114 &496415781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1964,7 +1964,6 @@ MonoBehaviour:
   speed: 1
   SubTargetImage: {fileID: 0}
   recordHandler: {fileID: 0}
-  SubTargetImage: {fileID: 501156431}
   saveLineRenderer: {fileID: 560040171}
   jsonManager: {fileID: 1559568191}
   mainController: {fileID: 996640685}
