@@ -39,12 +39,13 @@ public class InterfaceToggle : MonoBehaviour
     public void InitializeCreatePanel()
     {
         this.isPanelOpen = false;
+        InitializingStationeryController();
     }
     public void InitializeReadPanel()
     {
         this.isPanelOpen = true;
         this.readPanel.SetActive(true);
-        this.stationeryContrller.SetActive(false);
+        InitializingStationeryController();
     }
 
     public void UseReadPanel()
@@ -54,5 +55,11 @@ public class InterfaceToggle : MonoBehaviour
     public void UseCreatePanel()
     {
         this.currentUsedPanel = createPanel;
+    }
+
+    private void InitializingStationeryController()
+    {
+        this.stationeryContrller.SetActive(true);
+        this.stationeryContrller.SetActive(false);
     }
 }
