@@ -111,7 +111,6 @@ public class MenuHover : MonoBehaviour
     void CheckNoHover(Vector2 pointerScreenPos)
     {
         targetImage.transform.localScale = Vector3.Lerp(initialSize, scaledSize, hoverTimer * 3f);
-        isHovering = RectTransformUtility.RectangleContainsScreenPoint(panelRectTransform, pointerScreenPos, nrealCamera);
         if (RectTransformUtility.RectangleContainsScreenPoint(targetImage.rectTransform, pointerScreenPos, nrealCamera))
         {
             hoverTimer += Time.deltaTime;

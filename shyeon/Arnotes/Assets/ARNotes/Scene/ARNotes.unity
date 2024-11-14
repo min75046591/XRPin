@@ -1225,7 +1225,7 @@ GameObject:
   - component: {fileID: 364963452}
   - component: {fileID: 364963454}
   - component: {fileID: 364963453}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ethick1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1499,7 +1499,7 @@ GameObject:
   - component: {fileID: 461270563}
   - component: {fileID: 461270562}
   - component: {fileID: 461270564}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,8 +1583,8 @@ MonoBehaviour:
   menuCommander: {fileID: 0}
   handEnum: 0
   panelRectTransform: {fileID: 835413858}
-  panel: {fileID: 0}
-  targetImage: {fileID: 835413862}
+  panel: {fileID: 835413858}
+  targetImage: {fileID: 461270562}
   hoverTime: 0.5
   buttonHoverTime: 0.5
   nrealCamera: {fileID: 1789046857}
@@ -1635,7 +1635,7 @@ GameObject:
   - component: {fileID: 468985006}
   - component: {fileID: 468985005}
   - component: {fileID: 468985007}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: cancel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1832,7 +1832,7 @@ GameObject:
   - component: {fileID: 476337742}
   - component: {fileID: 476337744}
   - component: {fileID: 476337743}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: memo-text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2147,7 +2147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 538036683}
   - component: {fileID: 538036684}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: videoController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2290,8 +2290,8 @@ MonoBehaviour:
   nrealCamera: {fileID: 1789046857}
   thickButtons: []
   speed: 1
-  SubTargetImage: {fileID: 0}
-  recordHandler: {fileID: 0}
+  SubTargetImage: {fileID: 501156431}
+  recordHandler: {fileID: 790273858}
   saveLineRenderer: {fileID: 560040171}
   jsonManager: {fileID: 1559568191}
   mainController: {fileID: 996640685}
@@ -2486,7 +2486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 661901346}
   - component: {fileID: 661901347}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: videoBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2621,7 +2621,7 @@ GameObject:
   - component: {fileID: 705995183}
   - component: {fileID: 705995185}
   - component: {fileID: 705995184}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: cancel-text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3031,9 +3031,9 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835413857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.813}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2063819447}
   - {fileID: 1021219244}
@@ -3044,7 +3044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -933.4986, y: -442.4851}
+  m_AnchoredPosition: {x: -933.50476, y: -442.49594}
   m_SizeDelta: {x: 600, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835413859
@@ -3137,7 +3137,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835413857}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &881243290
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,7 +3149,7 @@ GameObject:
   - component: {fileID: 881243291}
   - component: {fileID: 881243293}
   - component: {fileID: 881243294}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: memo-image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3508,7 +3508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 982705185}
   - component: {fileID: 982705186}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: memoBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3686,7 +3686,7 @@ GameObject:
   - component: {fileID: 1007647320}
   - component: {fileID: 1007647322}
   - component: {fileID: 1007647321}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: eraser-image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3762,7 +3762,7 @@ GameObject:
   - component: {fileID: 1021219248}
   - component: {fileID: 1021219247}
   - component: {fileID: 1021219249}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: video
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4430,7 +4430,7 @@ GameObject:
   - component: {fileID: 1194495721}
   - component: {fileID: 1194495720}
   - component: {fileID: 1194495719}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: eraser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4839,7 +4839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1215782217}
   - component: {fileID: 1215782218}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: videoCommander
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5168,7 +5168,7 @@ GameObject:
   - component: {fileID: 1278282591}
   - component: {fileID: 1278282593}
   - component: {fileID: 1278282592}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: cancel-image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5242,7 +5242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1282451980}
   - component: {fileID: 1282451981}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: completeBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5417,7 +5417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1314293929}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: saveLineRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5453,7 +5453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1341373053}
   - component: {fileID: 1341373054}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: EraserThickCommander
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5547,7 +5547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377283977}
   - component: {fileID: 1377283978}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: videoHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5597,7 +5597,7 @@ GameObject:
   - component: {fileID: 1381688230}
   - component: {fileID: 1381688232}
   - component: {fileID: 1381688231}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ethick2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5981,7 +5981,7 @@ GameObject:
   - component: {fileID: 1493952569}
   - component: {fileID: 1493952571}
   - component: {fileID: 1493952570}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: video-text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6510,7 +6510,7 @@ GameObject:
   - component: {fileID: 1629131143}
   - component: {fileID: 1629131145}
   - component: {fileID: 1629131144}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: eraser-text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6589,7 +6589,7 @@ GameObject:
   - component: {fileID: 1637333325}
   - component: {fileID: 1637333327}
   - component: {fileID: 1637333326}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: complete-image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7078,7 +7078,7 @@ GameObject:
   - component: {fileID: 1744423038}
   - component: {fileID: 1744423040}
   - component: {fileID: 1744423039}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ethick3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7511,7 +7511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1810079205}
   - component: {fileID: 1810079206}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SaveCommander
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7869,7 +7869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1967938285}
   - component: {fileID: 1967938286}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SavePinCommander
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7919,7 +7919,7 @@ GameObject:
   - component: {fileID: 1989871178}
   - component: {fileID: 1989871180}
   - component: {fileID: 1989871179}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: complete-text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8044,7 +8044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2011949351}
   - component: {fileID: 2011949352}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: eraserBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8133,7 +8133,7 @@ GameObject:
   - component: {fileID: 2012882251}
   - component: {fileID: 2012882253}
   - component: {fileID: 2012882252}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: video-image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8419,7 +8419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2038586846}
   - component: {fileID: 2038586847}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: cancelBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8642,7 +8642,7 @@ GameObject:
   - component: {fileID: 2063819450}
   - component: {fileID: 2063819448}
   - component: {fileID: 2063819451}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: memo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8879,7 +8879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2089833167}
   - component: {fileID: 2089833166}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: videoButtonHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11141,7 +11141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &7472741406564461930
 PrefabInstance:
   m_ObjectHideFlags: 0

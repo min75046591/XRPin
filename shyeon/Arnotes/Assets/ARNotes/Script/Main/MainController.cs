@@ -44,16 +44,16 @@ public class MainController : MonoBehaviour
     private void JudgePinGeneration(HandState handState)
     {
         HandGesture gesture = handState.currentGesture;
-        if (this.prevGesture != HandGesture.Pinch && gesture == HandGesture.Pinch)
+        if (this.prevGesture != HandGesture.Pinch && gesture == HandGesture.Pinch) // 이전 제스처가 핀치가 아니고 지금 제스처가 핀치면
         {
             var pose = handState.GetJointPose(HandJointID.IndexTip);
-            Vector3 indexTipPosition = pose.position;
+            Vector3 indexTipPosition = pose.position;   // 검지 끝 위치 받아와서
             this.DisablePinGenerationMode();
-            Pin pin = pinManager.GeneratePin(indexTipPosition);
-            this.currentLoadedPin.Add(pin);
-            this.UseCreatePanel();
-            this.EnableCreateUserInterface();
-            MenuHover.PassPin(pin);
+            Pin pin = pinManager.GeneratePin(indexTipPosition); // 핀 생성
+            this.currentLoadedPin.Add(pin); // 현재 표시된 핀에 추가
+            this.UseCreatePanel();  // 핀 생성 패널 켜질 수 있게 하고
+            this.EnableCreateUserInterface();   // 인터페이스 모드로 변경(핀치 시 그리기모드 <-> 인터페이스 켜지기)
+            MenuHover.PassPin(pin); // MenuHover에 핀 정보 보내기
         }
     }
 

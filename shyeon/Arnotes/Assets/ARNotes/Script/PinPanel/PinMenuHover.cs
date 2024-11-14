@@ -70,16 +70,16 @@ public class PinMenuHover : MonoBehaviour
                 switch (targetImage.name)
                 {
                     case "memo":
-                        Debug.Log("memo ��ư ȣ��");
+                        Debug.Log("memo activate");
                         break;
                     case "video":
-                        Debug.Log("save ��ư ȣ��");
+                        Debug.Log("save activate");
                         break;
                     case "complete":
-                        Debug.Log("complete ��ư ȣ��");
+                        Debug.Log("complete activate");
                         break;
                     case "cancel":
-                        Debug.Log("cancel ��ư ȣ��");
+                        Debug.Log("cancel activate");
                         break;
                 }
             }
