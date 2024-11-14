@@ -1655,17 +1655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd7059e39743454b8b57d91894385eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuCommander: {fileID: 0}
-  handEnum: 0
-  panelRectTransform: {fileID: 835413858}
-  panel: {fileID: 835413858}
-  targetImage: {fileID: 461270562}
-  hoverTime: 0.5
-  buttonHoverTime: 0.5
-  nrealCamera: {fileID: 1789046857}
-  speed: 1
-  SubTargetImage: {fileID: 1637333326}
-  mainController: {fileID: 0}
 --- !u!1 &466487402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1789,17 +1778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd7059e39743454b8b57d91894385eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuCommander: {fileID: 0}
-  handEnum: 0
-  panelRectTransform: {fileID: 835413858}
-  panel: {fileID: 835413858}
-  targetImage: {fileID: 468985005}
-  hoverTime: 0.5
-  buttonHoverTime: 0.5
-  nrealCamera: {fileID: 1789046857}
-  speed: 1
-  SubTargetImage: {fileID: 1278282592}
-  mainController: {fileID: 0}
 --- !u!1 &469328667
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,7 +3073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &835413858
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3211,24 +3189,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835413857}
   m_CullTransparentMesh: 0
---- !u!1 &846298287
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 881243294}
-  - component: {fileID: 846298290}
-  - component: {fileID: 881243292}
-  m_Layer: 5
-  m_Name: PinPanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!33 &846298289
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3237,48 +3197,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881243290}
   m_Mesh: {fileID: 0}
---- !u!23 &846298290
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846298287}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 927fc486e5fce2840a1d13f9b9dbe0f9, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &881243290
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,18 +3234,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &881243292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846298287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &881243293
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3336,21 +3242,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881243290}
   m_CullTransparentMesh: 1
---- !u!4 &881243294
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846298287}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &887167495
 GameObject:
   m_ObjectHideFlags: 0
@@ -3739,7 +3630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &991498166
 Transform:
   m_ObjectHideFlags: 0
@@ -3809,7 +3700,8 @@ MonoBehaviour:
   handEnum: 0
   pinManager: {fileID: 663064549}
   jsonManager: {fileID: 1559568191}
-  createUserInterface: {fileID: 991498165}
+  createUserInterface: {fileID: 1257029741}
+  readUserInterface: {fileID: 835413857}
   toggle: {fileID: 1347547986}
   indexTip: {fileID: 1212971946}
 --- !u!1 &1007647319
@@ -3982,17 +3874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd7059e39743454b8b57d91894385eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuCommander: {fileID: 0}
-  handEnum: 0
-  panelRectTransform: {fileID: 835413858}
-  panel: {fileID: 835413858}
-  targetImage: {fileID: 1021219247}
-  hoverTime: 0.5
-  buttonHoverTime: 0.5
-  nrealCamera: {fileID: 1789046857}
-  speed: 1
-  SubTargetImage: {fileID: 2012882252}
-  mainController: {fileID: 0}
 --- !u!1 &1044585942
 GameObject:
   m_ObjectHideFlags: 0
@@ -4792,7 +4673,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3867546402527944270, guid: f43ea1cac6ee6d64d8c9923463d4adaf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867546402527944270, guid: f43ea1cac6ee6d64d8c9923463d4adaf, type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552098292264989133, guid: f43ea1cac6ee6d64d8c9923463d4adaf, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6552098292264989133, guid: f43ea1cac6ee6d64d8c9923463d4adaf, type: 3}
@@ -5661,7 +5550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handEnum: 0
-  panel: {fileID: 1257029741}
+  createPanel: {fileID: 1257029741}
+  readPanel: {fileID: 835413857}
   stationeryContrller: {fileID: 7270344204156491517}
   UICursor: {fileID: 1861470036}
 --- !u!1 &1377283976
@@ -8848,17 +8738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd7059e39743454b8b57d91894385eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuCommander: {fileID: 0}
-  handEnum: 0
-  panelRectTransform: {fileID: 835413858}
-  panel: {fileID: 835413858}
-  targetImage: {fileID: 2063819448}
-  hoverTime: 0.5
-  buttonHoverTime: 0.5
-  nrealCamera: {fileID: 1789046857}
-  speed: 1
-  SubTargetImage: {fileID: 881243292}
-  mainController: {fileID: 0}
 --- !u!1 &2088505477
 GameObject:
   m_ObjectHideFlags: 0
@@ -9904,7 +9783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3203435024534030773
 GameObject:
   m_ObjectHideFlags: 0
@@ -11507,7 +11386,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 881243294}
   - {fileID: 469328669}
   - {fileID: 946819681}
   - {fileID: 1395987477}

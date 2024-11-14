@@ -9,6 +9,7 @@ public class MainController : MonoBehaviour
     public PinManager pinManager;
     public JsonManager jsonManager; 
     public GameObject createUserInterface;
+    public GameObject readUserInterface;
     public InterfaceToggle toggle;
     public GameObject indexTip;
 
@@ -47,12 +48,12 @@ public class MainController : MonoBehaviour
         {
             var pose = handState.GetJointPose(HandJointID.IndexTip);
             Vector3 indexTipPosition = pose.position;
+            this.DisablePinGenerationMode();
             Pin pin = pinManager.GeneratePin(indexTipPosition);
             this.currentLoadedPin.Add(pin);
-            this.DisablePinGenerationMode();
+            this.UseCreatePanel();
             this.EnableCreateUserInterface();
             MenuHover.PassPin(pin);
-
         }
     }
 
@@ -70,14 +71,21 @@ public class MainController : MonoBehaviour
 
     public void EnableCreateUserInterface()
     {
-        toggle.InitializeToggle();
-        createUserInterface.SetActive(true);
-     
+        toggle.InitializeCreatePanel();
     }
 
     public void DisableCreateUserInterface()
     {
         createUserInterface.SetActive(false);
+    }
+    public void EnableReadUserInterface()
+    {
+        toggle.InitializeReadPanel();
+    }
+
+    public void DisableReadUserInterface()
+    {
+        readUserInterface.SetActive(false);
     }
 
     public List<Pin> GetCurrentLoadedPin()
@@ -92,5 +100,19 @@ public class MainController : MonoBehaviour
             if (pin.GetPinName() == pinName) return pin;
         }
         return null;
+    }
+
+    public bool IsEnableGenarationMode()
+    {
+        return this.pinGenerationMode;
+    }
+
+    public void UseCreatePanel()
+    {
+        toggle.UseCreatePanel();
+    }
+    public void UseReadPanel()
+    {
+        toggle.UseReadPanel();
     }
 }
