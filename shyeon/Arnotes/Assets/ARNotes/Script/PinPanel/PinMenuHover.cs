@@ -98,6 +98,7 @@ public class PinMenuHover : MonoBehaviour
     public void DisplayCurrentVideo()
     {
         //Pin�� JSON�� �ҷ��Ա� ������ JSON �� videoPath�� ���ؼ� �޾ƿ��� ����
+
     }
     public void SaveCurrentPin()
     {

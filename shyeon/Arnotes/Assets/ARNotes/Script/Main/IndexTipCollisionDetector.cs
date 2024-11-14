@@ -16,5 +16,6 @@ public class IndexTipCollisionDetector : MonoBehaviour
         this.mainController.UseReadPanel();
         this.mainController.EnableReadUserInterface();
         MenuHover.PassPin(p);
+        PinMenuHover.PassPin(p);
     }
 }
