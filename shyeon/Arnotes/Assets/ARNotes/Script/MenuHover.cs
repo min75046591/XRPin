@@ -69,10 +69,6 @@ public class MenuHover : MonoBehaviour
         {
             CheckNoHover(pointerScreenPos);
         }
-        else if (thickButtons.Length == 0)
-        {
-            CheckNoHover(pointerScreenPos);
-        }
         else
         {
             CheckHoverOnPanel(pointerScreenPos);
