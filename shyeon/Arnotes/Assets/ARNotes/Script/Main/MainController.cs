@@ -20,6 +20,7 @@ public class MainController : MonoBehaviour
     private bool pinGenerationMode = true;
 
 
+
     void Start()
     {
         this.currentLoadedPin = this.jsonManager.LoadAll();
@@ -35,8 +36,8 @@ public class MainController : MonoBehaviour
         var handState = NRInput.Hands.GetHandState(handEnum);
         if (pinGenerationMode)
         {
-            JudgePinGeneration(handState);
             this.indexTip.transform.position = handState.GetJointPose(HandJointID.IndexTip).position;
+            JudgePinGeneration(handState);
         }
         this.prevGesture = handState.currentGesture;
     }
@@ -44,22 +45,22 @@ public class MainController : MonoBehaviour
     private void JudgePinGeneration(HandState handState)
     {
         HandGesture gesture = handState.currentGesture;
-        if (this.prevGesture != HandGesture.Pinch && gesture == HandGesture.Pinch) // ÀÌÀü Á¦½ºÃ³°¡ ÇÉÄ¡°¡ ¾Æ´Ï°í Áö±Ý Á¦½ºÃ³°¡ ÇÉÄ¡¸é
+        if (this.prevGesture != HandGesture.Pinch && gesture == HandGesture.Pinch) // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Æ´Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½
         {
-            var pose = handState.GetJointPose(HandJointID.IndexTip);
-            Vector3 indexTipPosition = pose.position;   // °ËÁö ³¡ À§Ä¡ ¹Þ¾Æ¿Í¼­
             this.DisablePinGenerationMode();
-            Pin pin = pinManager.GeneratePin(indexTipPosition); // ÇÉ »ý¼º
-            this.currentLoadedPin.Add(pin); // ÇöÀç Ç¥½ÃµÈ ÇÉ¿¡ Ãß°¡
-            this.UseCreatePanel();  // ÇÉ »ý¼º ÆÐ³Î ÄÑÁú ¼ö ÀÖ°Ô ÇÏ°í
-            this.EnableCreateUserInterface();   // ÀÎÅÍÆäÀÌ½º ¸ðµå·Î º¯°æ(ÇÉÄ¡ ½Ã ±×¸®±â¸ðµå <-> ÀÎÅÍÆäÀÌ½º ÄÑÁö±â)
-            MenuHover.PassPin(pin); // MenuHover¿¡ ÇÉ Á¤º¸ º¸³»±â
+            Pin pin = pinManager.GeneratePin(this.indexTip.transform.position);
+            this.currentLoadedPin.Add(pin);
+            this.UseCreatePanel();
+            this.EnableCreateUserInterface();
+            MenuHover.PassPin(pin);
         }
     }
 
     public void EnablePinGenerationMode()
     {
         this.pinGenerationMode = true;
+        var handState = NRInput.Hands.GetHandState(handEnum);
+        this.indexTip.transform.position = handState.GetJointPose(HandJointID.IndexTip).position;
         this.indexTip.SetActive(true);
     }
 
