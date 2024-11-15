@@ -722,8 +722,8 @@ MonoBehaviour:
   SubTargetImage: {fileID: 1811378911}
   recordHandler: {fileID: 0}
   saveLineRenderer: {fileID: 0}
-  jsonManager: {fileID: 0}
-  mainController: {fileID: 0}
+  jsonManager: {fileID: 1559568191}
+  mainController: {fileID: 996640685}
 --- !u!1 &186362062
 GameObject:
   m_ObjectHideFlags: 0

@@ -158,6 +158,10 @@ public class MenuHover : MonoBehaviour
                         break;
                     case "cancel":
                         Debug.Log("cancel 버튼 호출");
+                        menuCommander.Command(targetImage.name);
+                        mainController.EnablePinGenerationMode();
+                        mainController.DisableCreateUserInterface();
+                        mainController.DeleteCurrentPin(currentPin);
                         break;
                 }
             }

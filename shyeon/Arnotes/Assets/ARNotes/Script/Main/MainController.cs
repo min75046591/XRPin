@@ -116,4 +116,11 @@ public class MainController : MonoBehaviour
     {
         toggle.UseReadPanel();
     }
+
+    public void DeleteCurrentPin(Pin pin)
+    {
+        currentLoadedPin.Remove(pin);
+        GameObject pinObject = GameObject.Find(pin.GetPinName());
+        pinObject.SetActive(false);
+    }
 }
