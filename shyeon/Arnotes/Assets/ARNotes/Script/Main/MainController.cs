@@ -45,7 +45,7 @@ public class MainController : MonoBehaviour
     private void JudgePinGeneration(HandState handState)
     {
         HandGesture gesture = handState.currentGesture;
-        if (this.prevGesture != HandGesture.Pinch && gesture == HandGesture.Pinch) // ���� ����ó�� ��ġ�� �ƴϰ� ���� ����ó�� ��ġ��
+        if (this.prevGesture != HandGesture.Pinch && gesture == HandGesture.Pinch)
         {
             this.DisablePinGenerationMode();
             Pin pin = pinManager.GeneratePin(this.indexTip.transform.position);
@@ -115,5 +115,12 @@ public class MainController : MonoBehaviour
     public void UseReadPanel()
     {
         toggle.UseReadPanel();
+    }
+
+    public void DeleteCurrentPin(Pin pin)
+    {
+        currentLoadedPin.Remove(pin);
+        GameObject pinObject = GameObject.Find(pin.GetPinName());
+        pinObject.SetActive(false);
     }
 }

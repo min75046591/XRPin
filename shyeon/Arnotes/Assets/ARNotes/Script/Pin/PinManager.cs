@@ -27,5 +27,4 @@ public class PinManager : MonoBehaviour
         newPin.transform.SetParent(null);
         newPin = null;
     }
-
 }
