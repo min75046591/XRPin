@@ -222,6 +222,7 @@ public class MenuHover : MonoBehaviour
         buttonHoverTimer = 0f;
         currentHoveredButton = null;
         isHovering = false;
+        ResetColor(targetImage, originalTargetColor);
     }
 
     void InvertColor(Image image)
