@@ -49,6 +49,7 @@ public class MainController : MonoBehaviour
         {
             this.DisablePinGenerationMode();
             Pin pin = pinManager.GeneratePin(this.indexTip.transform.position);
+            this.pinManager.DisplayPin(pin);
             this.currentLoadedPin.Add(pin);
             this.UseCreatePanel();
             this.EnableCreateUserInterface();
@@ -94,6 +95,17 @@ public class MainController : MonoBehaviour
         return this.currentLoadedPin;
     }
 
+    public int GetCurrentNonCompletedPin()
+    {
+        int ret = 0;
+        foreach(Pin pin in this.currentLoadedPin)
+        {
+            if (pin.GetPinStatus() != PinStatus.Completed) ret++;
+        }
+        return ret;
+    }
+
+
     public Pin FindPinByName(string pinName)
     {
         foreach(Pin pin in currentLoadedPin)
@@ -117,10 +129,24 @@ public class MainController : MonoBehaviour
         toggle.UseReadPanel();
     }
 
+    public void ChangePinStatusIntoWorking(Pin pin)
+    {
+        pinManager.DestroyPInObject(pin);
+        pinManager.ChangePinStatusIntoWorking(pin);
+        pinManager.DisplayPin(pin);
+        jsonManager.Save(pin);
+    }
+    public void ChangePinStatusIntoCompleted(Pin pin)
+    {
+        pinManager.DestroyPInObject(pin);
+        pinManager.ChangePinStatusIntoCompleted(pin);
+        pinManager.DisplayPin(pin);
+        jsonManager.Save(pin);
+    }
+
     public void DeleteCurrentPin(Pin pin)
     {
         currentLoadedPin.Remove(pin);
-        GameObject pinObject = GameObject.Find(pin.GetPinName());
-        pinObject.SetActive(false);
+        pinManager.DestroyPInObject(pin);
     }
 }

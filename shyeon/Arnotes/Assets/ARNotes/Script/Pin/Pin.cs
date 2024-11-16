@@ -10,6 +10,7 @@ public class Pin
     [SerializeField] private string pinName; // timestamp·Î
     [SerializeField] private string videoPath;
     [SerializeField] private List<LineObject> memo = new List<LineObject>();
+    [SerializeField] private PinStatus pinStatus;
 
     public Pin(string pinName)
     {
@@ -36,6 +37,12 @@ public class Pin
         this.videoPath = videoPath;
     }
 
+    public void ChangePinStatus(PinStatus changeStatus)
+    {
+        this.pinStatus = changeStatus;
+    }
+
+
     public List<LineObject> GetMemos()
     {
         return this.memo;
@@ -54,5 +61,10 @@ public class Pin
     public Vector3 GetPinPoint()
     {
         return this.pinPoint;
+    }
+
+    public PinStatus GetPinStatus()
+    {
+        return this.pinStatus;
     }
 }

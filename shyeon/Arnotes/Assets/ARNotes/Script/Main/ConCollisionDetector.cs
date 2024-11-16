@@ -14,10 +14,12 @@ public class ConCollisionDetector : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!mainController.IsEnableGenarationMode()) return;
+        if (meshRenderer == null) return;
         meshRenderer.enabled = false;
     }
     private void OnTriggerExit(Collider other)
     {
+        if (meshRenderer == null) return;
         meshRenderer.enabled = true;
     }
 

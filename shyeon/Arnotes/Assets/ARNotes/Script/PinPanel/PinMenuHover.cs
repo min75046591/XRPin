@@ -107,7 +107,7 @@ public class PinMenuHover : MonoBehaviour
             foreach (var lineObject in lineObjects)
             {
                 // LineObject의 색상 및 두께를 설정
-                linePen.ChangeColor(new Material(Shader.Find("Standard")) { color = lineObject.Color });
+                //linePen.ChangeColor(new Material(Shader.Find("Standard")) { color = lineObject.Color });
                 linePen.ChangeLineWidth(lineObject.Width);
 
                 // 선 그리기
@@ -148,6 +148,6 @@ public class PinMenuHover : MonoBehaviour
     public static void PassPin(Pin pin)
     {
         currentPin = pin;
-        Debug.Log(pin.GetPinName());
+        Debug.Log("pin Menu hover: " +  pin.GetPinName());
     }
 }

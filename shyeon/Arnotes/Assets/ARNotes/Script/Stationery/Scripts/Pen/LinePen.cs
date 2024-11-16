@@ -40,7 +40,6 @@ public class LinePen : BasePen
         {
             lineRendererHolder.AddLineRenderer(m_LineRenderer);
             m_LineRendererObj.transform.SetParent(null);
-            //m_LineRendererObj.AddComponent<DelayAutoDestroySelf>().DestroySelfWithDelay(lineLifeTime);
         }
         m_LineRendererObj = null;
 
@@ -88,11 +87,9 @@ public class LinePen : BasePen
 
         foreach (Vector3 pos in positions)
         {
-            if (m_WorldPosList.Count > 1 && Vector3.Distance(pos, m_WorldPosList[m_WorldPosList.Count - 1]) < MIN_LINE_SEGMENT)
-                return;
-
             Draw(pos);
         }
+        StopDraw();
     }
 
 }
