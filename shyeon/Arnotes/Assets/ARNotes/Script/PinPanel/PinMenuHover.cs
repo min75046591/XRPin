@@ -33,6 +33,8 @@ public class PinMenuHover : MonoBehaviour
     private static Pin currentPin;
     public LinePen linePen;
 
+    public VideoLoader videoLoader; 
+
     void Start()
     {
         if (targetImage != null)
@@ -71,9 +73,13 @@ public class PinMenuHover : MonoBehaviour
                 {
                     case "memo":
                         Debug.Log("memo activate");
+                        List<LineObject> lineObject = GetPinLineObjects(currentPin);
+                        DisplayCurrentPinLines(lineObject);
                         break;
                     case "video":
                         Debug.Log("save activate");
+                        string currentPinVideoPath = currentPin.getVideoPaths();
+                        videoLoader.VideoLoadAndPlay(currentPinVideoPath);
                         break;
                     case "complete":
                         Debug.Log("complete activate");
@@ -90,20 +96,27 @@ public class PinMenuHover : MonoBehaviour
         }
     }
 
-    public void DisplayCurrentPinLine(List<Vector3> positions)
+    public void DisplayCurrentPinLines(List<LineObject> lineObjects)
     {
-        linePen.DisplayLine(positions);
+        if (linePen != null)
+        {
+            foreach (var lineObject in lineObjects)
+            {
+                // LineObject의 색상 및 두께를 설정
+                linePen.ChangeColor(new Material(Shader.Find("Standard")) { color = lineObject.Color });
+                linePen.ChangeLineWidth(lineObject.Width);
+
+                // 선 그리기
+                linePen.DisplayLine(lineObject.GetPoints());
+            }
+        }
     }
 
-    public void DisplayCurrentVideo()
+    public List<LineObject> GetPinLineObjects(Pin currentPin)
     {
-        //Pin�� JSON�� �ҷ��Ա� ������ JSON �� videoPath�� ���ؼ� �޾ƿ��� ����
+        return currentPin.GetMemos();
     }
-    public void SaveCurrentPin()
-    {
-        //�� �ٲٴ� ����
-        //Pin�� �����ϴ� ����
-    }
+
     public void Cancel()
     {
         //Pin�� �����ϴ� ����

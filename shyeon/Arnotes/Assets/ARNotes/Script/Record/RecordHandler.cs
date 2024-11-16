@@ -8,8 +8,7 @@ public class RecordHandler : MonoBehaviour
 
     public void StartRecording()
     {
-        recordButtonHandler.StartRecording();
-
+        recordButtonHandler.Initialize();
     }
     public void StopRecording()
     {

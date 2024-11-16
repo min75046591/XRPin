@@ -11,11 +11,10 @@ public class Pin
     [SerializeField] private string videoPath;
     [SerializeField] private List<LineObject> memo = new List<LineObject>();
 
-    public Pin (string pinName)
+    public Pin(string pinName)
     {
         this.pinName = pinName;
     }
-
 
     public string GetPinName()
     {
@@ -35,6 +34,11 @@ public class Pin
     public void setVideoPath(string videoPath)
     {
         this.videoPath = videoPath;
+    }
+
+    public List<LineObject> GetMemos()
+    {
+        return this.memo;
     }
 
     public void SetMemos(List<LineObject> lines)
