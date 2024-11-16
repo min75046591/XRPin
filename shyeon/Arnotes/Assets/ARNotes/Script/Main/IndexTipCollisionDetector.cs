@@ -17,7 +17,7 @@ public class IndexTipCollisionDetector : MonoBehaviour
         this.mainController.DisablePinGenerationMode();
         this.mainController.UseReadPanel();
         this.mainController.EnableReadUserInterface();
-        MenuHover.PassPin(p);
+        PinMenuHover.PassPin(p);
     }
 
     private bool IsColisionWithLight(GameObject currentTarget)

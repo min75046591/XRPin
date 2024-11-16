@@ -95,6 +95,17 @@ public class MainController : MonoBehaviour
         return this.currentLoadedPin;
     }
 
+    public int GetCurrentNonCompletedPin()
+    {
+        int ret = 0;
+        foreach(Pin pin in this.currentLoadedPin)
+        {
+            if (pin.GetPinStatus() != PinStatus.Completed) ret++;
+        }
+        return ret;
+    }
+
+
     public Pin FindPinByName(string pinName)
     {
         foreach(Pin pin in currentLoadedPin)
@@ -123,12 +134,14 @@ public class MainController : MonoBehaviour
         pinManager.DestroyPInObject(pin);
         pinManager.ChangePinStatusIntoWorking(pin);
         pinManager.DisplayPin(pin);
+        jsonManager.Save(pin);
     }
     public void ChangePinStatusIntoCompleted(Pin pin)
     {
         pinManager.DestroyPInObject(pin);
         pinManager.ChangePinStatusIntoCompleted(pin);
         pinManager.DisplayPin(pin);
+        jsonManager.Save(pin);
     }
 
     public void DeleteCurrentPin(Pin pin)
