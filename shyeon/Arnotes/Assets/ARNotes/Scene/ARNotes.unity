@@ -1252,6 +1252,7 @@ MonoBehaviour:
   nrealCamera: {fileID: 1789046857}
   speed: 1
   SubTargetImage: {fileID: 1637333326}
+  stationeryController: {fileID: 7270344204156491517}
   mainController: {fileID: 996640685}
   linePen: {fileID: 4169317454002253430}
 --- !u!1 &466487402
@@ -1387,6 +1388,7 @@ MonoBehaviour:
   nrealCamera: {fileID: 1789046857}
   speed: 1
   SubTargetImage: {fileID: 1278282592}
+  stationeryController: {fileID: 7270344204156491517}
   mainController: {fileID: 996640685}
   linePen: {fileID: 4169317454002253430}
 --- !u!1 &469328667
@@ -3440,6 +3442,7 @@ MonoBehaviour:
   nrealCamera: {fileID: 1789046857}
   speed: 1
   SubTargetImage: {fileID: 2012882252}
+  stationeryController: {fileID: 7270344204156491517}
   mainController: {fileID: 996640685}
   linePen: {fileID: 4169317454002253430}
 --- !u!1 &1044585942
@@ -8148,6 +8151,7 @@ MonoBehaviour:
   nrealCamera: {fileID: 1789046857}
   speed: 1
   SubTargetImage: {fileID: 881243294}
+  stationeryController: {fileID: 7270344204156491517}
   mainController: {fileID: 996640685}
   linePen: {fileID: 4169317454002253430}
 --- !u!1 &2088505477

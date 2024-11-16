@@ -51,7 +51,7 @@ public class PinMenuHover : MonoBehaviour
 
         Vector3 screenPoint = nrealCamera.WorldToScreenPoint(pose.position);
         Vector2 pointerScreenPos = new Vector2(screenPoint.x, screenPoint.y);
-        CheckHoverOnPanel(pointerScreenPos);    
+        CheckHoverOnPanel(pointerScreenPos);
     }
 
     void CheckHoverOnPanel(Vector2 pointerScreenPos)
@@ -80,6 +80,9 @@ public class PinMenuHover : MonoBehaviour
                         break;
                     case "cancel":
                         Debug.Log("cancel activate");
+                        this.mainController.EnablePinGenerationMode();
+                        this.mainController.UseCreatePanel();
+                        this.mainController.DisableReadUserInterface();
                         break;
                 }
             }
