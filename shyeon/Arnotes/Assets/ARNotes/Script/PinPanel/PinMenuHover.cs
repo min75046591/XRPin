@@ -73,8 +73,8 @@ public class PinMenuHover : MonoBehaviour
                 {
                     case "memo":
                         Debug.Log("memo activate");
-                        List<LineObject> lineObject = GetPinLineObjects(currentPin);
-                        DisplayCurrentPinLines(lineObject);
+                        List<LineObject> lineObjects = GetPinLineObjects(currentPin);
+                        DisplayCurrentPinLines(lineObjects);
                         break;
                     case "video":
                         Debug.Log("save activate");
@@ -103,7 +103,7 @@ public class PinMenuHover : MonoBehaviour
     {
         if (linePen != null)
         {
-            foreach (var lineObject in lineObjects)
+            foreach (LineObject lineObject in lineObjects)
             {
                 // LineObject의 색상 및 두께를 설정
                 //linePen.ChangeColor(new Material(Shader.Find("Standard")) { color = lineObject.Color });
