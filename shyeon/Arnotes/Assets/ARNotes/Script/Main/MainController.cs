@@ -23,11 +23,13 @@ public class MainController : MonoBehaviour
 
     void Start()
     {
+
         this.currentLoadedPin = this.jsonManager.LoadAll();
         for(int i = 0; i < this.currentLoadedPin.Count;i++)
         {
             pinManager.DisplayPin(this.currentLoadedPin[i]);
         }
+        Debug.Log("currentLoadedPin : " + currentLoadedPin.Count);
     }
 
     void Update()
@@ -98,10 +100,13 @@ public class MainController : MonoBehaviour
     public int GetCurrentNonCompletedPin()
     {
         int ret = 0;
+        Debug.Log("Pin size: " + this.currentLoadedPin.Count);
         foreach(Pin pin in this.currentLoadedPin)
         {
+            Debug.Log("Pin status: " + pin.GetPinStatus());
             if (pin.GetPinStatus() != PinStatus.Completed) ret++;
         }
+        Debug.Log("ret : " + ret);
         return ret;
     }
 
