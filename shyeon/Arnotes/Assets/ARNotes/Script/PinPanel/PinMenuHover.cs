@@ -74,6 +74,7 @@ public class PinMenuHover : MonoBehaviour
                     case "memo":
                         Debug.Log("memo activate");
                         List<LineObject> lineObject = GetPinLineObjects(currentPin);
+                        Debug.Log(lineObject.Count);
                         DisplayCurrentPinLines(lineObject);
                         break;
                     case "video":
@@ -111,6 +112,13 @@ public class PinMenuHover : MonoBehaviour
 
                 // 선 그리기
                 linePen.DisplayLine(lineObject.GetPoints());
+
+                // 리스트의 각 Vector3 값을 출력
+                var points = lineObject.GetPoints();
+                for (int i = 0; i < points.Count; i++)
+                {
+                    Debug.Log("Point " + i + ": " + points[i]);
+                }
             }
         }
     }
