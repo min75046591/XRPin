@@ -13,11 +13,11 @@ public class IndexTipCollisionDetector : MonoBehaviour
         if (IsColisionWithLight(other.gameObject)) return;
         GameObject pin = other.transform.parent?.gameObject;
         Pin p = mainController.FindPinByName(pin.name);
+        this.mainController.ChangePinStatusIntoWorking(p);
         this.mainController.DisablePinGenerationMode();
         this.mainController.UseReadPanel();
         this.mainController.EnableReadUserInterface();
         MenuHover.PassPin(p);
-        PinMenuHover.PassPin(p);
     }
 
     private bool IsColisionWithLight(GameObject currentTarget)

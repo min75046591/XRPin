@@ -7,7 +7,8 @@ using Unity.VisualScripting;
 
 public class StationeryController : MonoBehaviour
 {
-    public HandEnum handEnum;
+    public HandEnum rightHandEnum;
+    public HandEnum leftHandEnum;
     public BasePen LinePen;
     public BasePenCtrl TwoDPenCtrl;
     public BasePenCtrl ThreeDPenCtrl;
@@ -19,27 +20,18 @@ public class StationeryController : MonoBehaviour
     public float circleDiameter = 0.005f;
 
     public List<Material> colorMaterials;
-    private int colorIdx = 0;
-
 
     private BasePenCtrl CurrentPenController;
     private BaseEraserCtrl CurrentEraserController;
 
-
-    // delete
-    private Vector3 previousPosition;
-    private float lastSwipeTime;
-    private float swipeThreshold = 0.2f;
-    private float timeThreshold = 0.5f;
-
     private bool drawingMode;
     private bool removingMode;
-    private float lastModeSwitchTime = 0f;
     private bool twoDMode = true;
     private bool threeDMode = false;
-    public float modeSwitchCooldown = 1.0f;
-
-
+    private HandGesture prevRightGesture = HandGesture.None;
+    private HandGesture prevLeftGesture = HandGesture.None;
+    private bool increasingMode = false;
+    private bool decreasingMode = true;
     void Awake()
     {
         // initialize Pen
@@ -59,24 +51,12 @@ public class StationeryController : MonoBehaviour
     void Update()
     {
         if (!NRInput.Hands.IsRunning) return;
-        var handState = NRInput.Hands.GetHandState(handEnum);
-
-        HandGesture gesture = handState.currentGesture;
-
-        DisplayDrawingPoint(handState);
-        DisplayRemovingPoint(handState);
+        var rightHandState = NRInput.Hands.GetHandState(rightHandEnum);
+        JudgeRightGesture(rightHandState);
 
 
-        JudgeDrawing(gesture);
-        JudgeRemoving(gesture);
-        JudgeModeSwitching(gesture);
-
-        // to delete
-        //TestLineWidth(gesture);
-        //TestColorChange(gesture);
-        //TestDimensionConversion(gesture);
-        //TestEraserCircleDiameter(gesture);
-
+        var leftHandState = NRInput.Hands.GetHandState(leftHandEnum);
+        JudgeLeftGesture(leftHandState);
     }
 
     public void DisplayDrawingPoint(HandState handState)
@@ -99,6 +79,43 @@ public class StationeryController : MonoBehaviour
         else this.CurrentEraserController.ResetPoint();
     }
 
+    private void JudgeRightGesture(HandState state)
+    {
+        HandGesture gesture = state.currentGesture;
+        DisplayDrawingPoint(state);
+        DisplayRemovingPoint(state);
+        JudgeDrawing(gesture);
+        JudgeRemoving(gesture);
+        JudgeModeSwitching(gesture, prevRightGesture);
+        prevRightGesture = gesture;
+    }
+
+    private void JudgeLeftGesture(HandState state)
+    {
+        HandGesture gesture = state.currentGesture;
+        JudgeIncreasingOrDecreasing(gesture);
+        ControlThickness(gesture);
+        prevLeftGesture = gesture;
+    }
+
+    private void JudgeIncreasingOrDecreasing(HandGesture gesture)
+    {
+        if (prevLeftGesture != HandGesture.Grab && gesture == HandGesture.Grab)
+        {
+            this.increasingMode = !this.increasingMode;
+            this.decreasingMode = !this.decreasingMode;
+        }
+    }
+
+    private void ControlThickness(HandGesture gesture)
+    {
+        if (gesture != HandGesture.Grab) return;
+        if (increasingMode && drawingMode) AddLineDelta(0.0005f);
+        else if (increasingMode && removingMode) AddDiameterDelta(0.0005f);
+        else if (decreasingMode && drawingMode) AddLineDelta(-0.0005f);
+        else if (decreasingMode && removingMode) AddDiameterDelta(-0.0005f);
+    }
+
     private void JudgeDrawing(HandGesture gesture)
     {
         if (CanStart(drawingMode, gesture)) this.CurrentPenController.StartDraw();
@@ -110,65 +127,20 @@ public class StationeryController : MonoBehaviour
         if (CanStart(removingMode, gesture)) this.CurrentEraserController.StartRemoving();
     }
 
-    private void JudgeModeSwitching(HandGesture gesture)
+    private void JudgeModeSwitching(HandGesture gesture, HandGesture prevGesture)
     {
-        if(CanSwitching(gesture))
+        if (CanSwitching(gesture, prevGesture))
         {
             drawingMode = !drawingMode;
             removingMode = !removingMode;
-            lastModeSwitchTime = Time.time;
         }
     }
 
-    //private void TestDimensionConversion(HandGesture gesture)
-    //{
-    //    if (gesture == HandGesture.System) ChangeThreeD();
-
-    //    if(gesture == HandGesture.ThumbsUp) ChangeTwoD();
-    //}
-
-    // delete
-    private int DetectDirection()
-    {
-        // Get the current position of the index fingertip (or another joint)
-        var handState = NRInput.Hands.GetHandState(handEnum);
-        Pose indexTipPose = handState.GetJointPose(HandJointID.Palm);
-        Vector3 currentPosition = indexTipPose.position;
-
-        // Check if the swipe is detected within the time threshold
-        if (Time.time - lastSwipeTime > timeThreshold)
-        {
-
-            float swipeDistance = Vector3.Distance(previousPosition, currentPosition);
-            // If the movement is greater than the swipe threshold, detect a swipe
-            if (swipeDistance > swipeThreshold)
-            {
-                // Calculate the direction of the swipe
-                Vector3 direction = (currentPosition - previousPosition).normalized;
-
-                // Check if the swipe is primarily in a horizontal or vertical direction
-                if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-                {
-                    if (direction.x > 0.0f)
-                    {
-                        return -1;
-                    }
-                    else
-                    {
-                        return 1;
-                    }
-                }
-                lastSwipeTime = Time.time;
-                previousPosition = currentPosition;
-            } 
-        }
-        return 0;
-    }
 
     private bool IsVisible(bool mode, HandState handState)
     {
         return mode && (handState.currentGesture == HandGesture.Point || handState.currentGesture == HandGesture.OpenHand
-        || handState.currentGesture == HandGesture.Grab || handState.currentGesture == HandGesture.Victory);
+        || handState.currentGesture == HandGesture.Grab);
     }
 
     private bool CanStart(bool mode, HandGesture gesture)
@@ -176,47 +148,11 @@ public class StationeryController : MonoBehaviour
         return mode && gesture == HandGesture.Point;
     }
 
-    private bool CanSwitching(HandGesture gesture)
+    private bool CanSwitching(HandGesture gesture, HandGesture prevGesture)
     {
-        return (Time.time - lastModeSwitchTime) > modeSwitchCooldown && gesture == HandGesture.Call;
+        return prevGesture != HandGesture.Grab && gesture == HandGesture.Grab;
     }
 
-    //private void TestLineWidth(HandGesture gesture)
-    //{
-    //    if(drawingMode && gesture == HandGesture.Grab)
-    //    {
-    //        this.AddLineDelta(0.0001f);
-    //    }
-    //    else if(drawingMode && gesture == HandGesture.Victory)
-    //    {
-    //        this.AddLineDelta(-0.0001f);
-    //    }
-    //}
-
-    //private void TestColorChange(HandGesture gesture)
-    //{
-    //    if (gesture == HandGesture.ThumbsUp)
-    //    {
-    //        int colorOffset = DetectDirection();
-    //        if (colorOffset == 0) return;
-    //        colorIdx += colorOffset;
-    //        if (colorIdx < 0) colorIdx = colorMaterials.Count - 1;
-    //        else if (colorIdx == colorMaterials.Count) colorIdx = 0;
-    //        this.CurrentPenController.ChangeColor(colorMaterials[colorIdx]);
-    //    }
-    //}
-
-    //private void TestEraserCircleDiameter(HandGesture gesture)
-    //{
-    //    if (removingMode && gesture == HandGesture.Grab)
-    //    {
-    //        this.AddDiameterDelta(0.0001f);
-    //    }
-    //    else if (removingMode && gesture == HandGesture.Victory)
-    //    {
-    //        this.AddDiameterDelta(-0.0001f);
-    //    }
-    //}
 
     public void SetPenCtrl(BasePenCtrl penCtrl)
     {
@@ -260,6 +196,7 @@ public class StationeryController : MonoBehaviour
         this.circleDiameter += diameterDelta;
         this.CurrentEraserController.ChangeCircleDiameter(circleDiameter);
     }
+
     public void ChangeEraserDiameter(float circleDiameter)
     {
         if (circleDiameter <= 0f) return;
@@ -272,21 +209,7 @@ public class StationeryController : MonoBehaviour
         this.CurrentPenController.ChangeColor(colorMaterial);
     }
 
-    public void ChangeThreeD()
-    {
-        this.SetPenCtrl(ThreeDPenCtrl);
-        this.SetEraserCtrl(ThreeDEraserCtrl);
-        this.twoDMode = false;
-        this.threeDMode = true;
-    }
 
-    //public void ChangeTwoD()
-    //{
-    //    this.SetPenCtrl(TwoDPenCtrl);
-    //    this.SetEraserCtrl(TwoDEraserCtrl);
-    //    this.twoDMode = true;
-    //    this.threeDMode = false;
-    //}
     public void ConvertToDrawingMode()
     {
         this.drawingMode = true;
@@ -296,12 +219,6 @@ public class StationeryController : MonoBehaviour
     {
         this.drawingMode = false;
         this.removingMode = true;
-    }
-
-    public void SwitchDrawingAndRemovingMode()
-    {
-        this.drawingMode = !this.drawingMode;
-        this.removingMode = !this.removingMode;
     }
 
     public void RemoveAll()
