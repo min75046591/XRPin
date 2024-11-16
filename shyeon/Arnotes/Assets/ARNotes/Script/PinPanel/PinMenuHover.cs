@@ -73,7 +73,7 @@ public class PinMenuHover : MonoBehaviour
                         Debug.Log("memo activate");
                         break;
                     case "video":
-                        Debug.Log("save activate");
+                        Debug.Log("video activate");
                         break;
                     case "complete":
                         Debug.Log("complete activate");
