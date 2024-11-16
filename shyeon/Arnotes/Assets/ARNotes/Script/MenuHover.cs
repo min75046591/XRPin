@@ -39,11 +39,11 @@ public class MenuHover : MonoBehaviour
 
     void Start()
     {
-        HideThickButtons();
-        if (targetImage != null)
+        if (SubTargetImage != null)
         {
-            originalTargetColor = targetImage.color;
+            originalTargetColor = SubTargetImage.color;
         }
+        HideThickButtons();
     }
 
     void Update()
@@ -222,7 +222,7 @@ public class MenuHover : MonoBehaviour
         buttonHoverTimer = 0f;
         currentHoveredButton = null;
         isHovering = false;
-        ResetColor(targetImage, originalTargetColor);
+        ResetColor(SubTargetImage, originalTargetColor);
     }
 
     void InvertColor(Image image)
