@@ -128,18 +128,19 @@ public class MenuHover : MonoBehaviour
                             //string recordVideoSavePath 
                             isRecording = true;
                             recordHandler.StartRecording();
-
                             string videoPath = recordHandler.recordButtonHandler.VideoSavePath;
                             Debug.Log(videoPath);
                             currentPin.setVideoPath(videoPath);
-                            
+                            RecordingColor(SubTargetImage);
                             //빨간색으로 바꾸는 로직 추가
+
                         }
                         else if (isRecording)
                         {
                             isRecording = false;
                             recordHandler.StopRecording(); // 녹화 중지
-                            //원래 색으로 바꾸는 로직 추가 
+                            //원래 색으로 바꾸는 로직 추가
+                            ResetColor(SubTargetImage, originalTargetColor);
                             Debug.Log("녹화 중지");
                         }
 
@@ -239,6 +240,15 @@ public class MenuHover : MonoBehaviour
         if (image != null)
         {
             image.color = originalColor;
+        }
+    }
+
+    void RecordingColor (Image image)
+    {
+        if (image != null)
+        {
+            Color RecordingColor = new Color(1, 0, 0, image.color.a);
+            image.color = RecordingColor;
         }
     }
 
