@@ -91,5 +91,4 @@ public class LinePen : BasePen
         }
         StopDraw();
     }
-
 }

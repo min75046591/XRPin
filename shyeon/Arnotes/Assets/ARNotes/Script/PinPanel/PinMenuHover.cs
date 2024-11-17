@@ -76,6 +76,8 @@ public class PinMenuHover : MonoBehaviour
                         List<LineObject> lineObject = GetPinLineObjects(currentPin);
                         Debug.Log(lineObject.Count);
                         DisplayCurrentPinLines(lineObject);
+                        menuCommander.Command(targetImage.name);
+                        ((MemoCommander)menuCommander).SetCurrentPin(currentPin);
                         break;
                     case "video":
                         Debug.Log("video activate");
@@ -84,11 +86,18 @@ public class PinMenuHover : MonoBehaviour
                         break;
                     case "complete":
                         Debug.Log("complete activate");
+                        this.mainController.ChangePinStatusIntoCompleted(currentPin);
+                        this.mainController.EnablePinGenerationMode();
+                        this.mainController.DisableReadUserInterface();
+                        break;
+                    case "delete":
+                        this.mainController.DeletePin(currentPin);
+                        this.mainController.EnablePinGenerationMode();
+                        this.mainController.DisableReadUserInterface();
                         break;
                     case "cancel":
                         Debug.Log("cancel activate");
                         this.mainController.EnablePinGenerationMode();
-                        this.mainController.UseCreatePanel();
                         this.mainController.DisableReadUserInterface();
                         break;
                 }
@@ -104,7 +113,7 @@ public class PinMenuHover : MonoBehaviour
     {
         if (linePen != null)
         {
-            foreach (var lineObject in lineObjects)
+            foreach (LineObject lineObject in lineObjects)
             {
                 // LineObject의 색상 및 두께를 설정
                 //linePen.ChangeColor(new Material(Shader.Find("Standard")) { color = lineObject.Color });
