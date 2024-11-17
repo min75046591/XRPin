@@ -89,6 +89,11 @@ public class PinMenuHover : MonoBehaviour
                         this.mainController.EnablePinGenerationMode();
                         this.mainController.DisableReadUserInterface();
                         break;
+                    case "delete":
+                        this.mainController.DeletePin(currentPin);
+                        this.mainController.EnablePinGenerationMode();
+                        this.mainController.DisableReadUserInterface();
+                        break;
                     case "cancel":
                         Debug.Log("cancel activate");
                         this.mainController.EnablePinGenerationMode();

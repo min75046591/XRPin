@@ -147,4 +147,11 @@ public class MainController : MonoBehaviour
         currentLoadedPin.Remove(pin);
         pinManager.DestroyPInObject(pin);
     }
+
+    public void DeletePin(Pin pin)
+    {
+        this.currentLoadedPin.Remove(pin);
+        pinManager.DestroyPInObject(pin);
+        jsonManager.DeleteJsonFile(pin.GetPinName());
+    }
 }
