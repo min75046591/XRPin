@@ -45,7 +45,6 @@ public class PinManager : MonoBehaviour
         GameObject pinObject = GameObject.Find(pin.GetPinName());
         if (pinObject != null)
         {
-            Debug.Log("Destory object");
             Destroy(pinObject);
         }
     }

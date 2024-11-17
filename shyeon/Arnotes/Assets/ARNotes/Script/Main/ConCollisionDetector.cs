@@ -13,8 +13,10 @@ public class ConCollisionDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.name != "IndexTip") return;
         if (!mainController.IsEnableGenarationMode()) return;
         if (meshRenderer == null) return;
+       
         meshRenderer.enabled = false;
     }
     private void OnTriggerExit(Collider other)

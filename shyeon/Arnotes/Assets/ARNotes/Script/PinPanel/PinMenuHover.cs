@@ -75,6 +75,8 @@ public class PinMenuHover : MonoBehaviour
                         Debug.Log("memo activate");
                         List<LineObject> lineObject = GetPinLineObjects(currentPin);
                         DisplayCurrentPinLines(lineObject);
+                        menuCommander.Command(targetImage.name);
+                        ((MemoCommander)menuCommander).SetCurrentPin(currentPin);
                         break;
                     case "video":
                         Debug.Log("save activate");
@@ -83,11 +85,13 @@ public class PinMenuHover : MonoBehaviour
                         break;
                     case "complete":
                         Debug.Log("complete activate");
+                        this.mainController.ChangePinStatusIntoCompleted(currentPin);
+                        this.mainController.EnablePinGenerationMode();
+                        this.mainController.DisableReadUserInterface();
                         break;
                     case "cancel":
                         Debug.Log("cancel activate");
                         this.mainController.EnablePinGenerationMode();
-                        this.mainController.UseCreatePanel();
                         this.mainController.DisableReadUserInterface();
                         break;
                 }
