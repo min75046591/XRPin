@@ -124,13 +124,10 @@ public class MainController : MonoBehaviour
     {
         toggle.UseCreatePanel();
     }
-    public void UseReadPanel()
-    {
-        toggle.UseReadPanel();
-    }
 
     public void ChangePinStatusIntoWorking(Pin pin)
     {
+        if (pin.GetPinStatus() != PinStatus.Generated) return;
         pinManager.DestroyPInObject(pin);
         pinManager.ChangePinStatusIntoWorking(pin);
         pinManager.DisplayPin(pin);
@@ -138,6 +135,7 @@ public class MainController : MonoBehaviour
     }
     public void ChangePinStatusIntoCompleted(Pin pin)
     {
+        if (pin.GetPinStatus() != PinStatus.Working) return;
         pinManager.DestroyPInObject(pin);
         pinManager.ChangePinStatusIntoCompleted(pin);
         pinManager.DisplayPin(pin);

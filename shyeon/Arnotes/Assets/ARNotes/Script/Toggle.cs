@@ -24,7 +24,6 @@ public class InterfaceToggle : MonoBehaviour
         // Pinch 제스처가 처음 발생했을 때만 토글
         if (handState.currentGesture == HandGesture.Pinch && !wasPinching)
         {
-            Debug.Log("test");
             // 패널의 현재 활성 상태를 반대로 설정
             isPanelOpen = !isPanelOpen;
             currentUsedPanel.SetActive(isPanelOpen);
@@ -39,25 +38,29 @@ public class InterfaceToggle : MonoBehaviour
     public void InitializeCreatePanel()
     {
         this.isPanelOpen = false;
-        InitializingStationeryController();
+        gameObject.SetActive(true);
+        InitializeStationeryController();
     }
     public void InitializeReadPanel()
     {
-        this.isPanelOpen = true;
         this.readPanel.SetActive(true);
-        InitializingStationeryController();
+        gameObject.SetActive(false);
+        InitializeStationeryController();
     }
 
-    public void UseReadPanel()
-    {
-        this.currentUsedPanel = readPanel;
-    }
+    
     public void UseCreatePanel()
     {
         this.currentUsedPanel = createPanel;
     }
 
-    private void InitializingStationeryController()
+    public void EnableStationery()
+    {
+        this.readPanel.SetActive(false);
+        this.stationeryContrller.SetActive(true);
+    }
+
+    private void InitializeStationeryController()
     {
         this.stationeryContrller.SetActive(true);
         this.stationeryContrller.SetActive(false);
