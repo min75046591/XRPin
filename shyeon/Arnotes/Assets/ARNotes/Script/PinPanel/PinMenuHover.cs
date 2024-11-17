@@ -78,7 +78,7 @@ public class PinMenuHover : MonoBehaviour
                         DisplayCurrentPinLines(lineObject);
                         break;
                     case "video":
-                        Debug.Log("save activate");
+                        Debug.Log("video activate");
                         string currentPinVideoPath = currentPin.getVideoPaths();
                         videoLoader.VideoLoadAndPlay(currentPinVideoPath);
                         break;

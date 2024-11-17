@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.Android;
 using NRKernal;
+
 public class VideoLoader : MonoBehaviour
 {
     public GameObject screen;
@@ -32,6 +33,8 @@ public class VideoLoader : MonoBehaviour
     // 이 함수만 호출하면 자동 실행됨
     public void VideoLoadAndPlay(string videoFilePath)
     {
+        Debug.Log("videoFilePath: " +  videoFilePath);
+
         if (string.IsNullOrEmpty(videoFilePath))
         {
             Debug.LogError("비디오 파일 경로 전달 에러");
@@ -42,6 +45,7 @@ public class VideoLoader : MonoBehaviour
         else if (File.Exists(videoFilePath))
         {
             videoPlayer.url = videoFilePath;
+            Debug.Log("GetScreenActive : ===========================================");
             GetScreenActive();
         }
         else
