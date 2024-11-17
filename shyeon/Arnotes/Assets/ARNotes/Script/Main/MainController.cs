@@ -100,13 +100,10 @@ public class MainController : MonoBehaviour
     public int GetCurrentNonCompletedPin()
     {
         int ret = 0;
-        Debug.Log("Pin size: " + this.currentLoadedPin.Count);
         foreach(Pin pin in this.currentLoadedPin)
         {
-            Debug.Log("Pin status: " + pin.GetPinStatus());
             if (pin.GetPinStatus() != PinStatus.Completed) ret++;
         }
-        Debug.Log("ret : " + ret);
         return ret;
     }
 

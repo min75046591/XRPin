@@ -19,13 +19,10 @@ public class CountPanelController : MonoBehaviour
     // 핀 개수 UI를 업데이트하는 메서드
     public void UpdatePinCountDisplay()
     {
-        
-        Debug.Log("current Pin Count = " + currentPinCount);
-        
+       
         if (pinCountText != null)
         {
             currentPinCount = mainController.GetCurrentNonCompletedPin();
-            Debug.Log("currentPinCount: " + currentPinCount);
             pinCountText.text = "비완료 핀 수: " + currentPinCount;
             
         }
