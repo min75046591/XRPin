@@ -62,7 +62,7 @@ public class VideoLoader : MonoBehaviour
     {
         videoTransform = screen.transform;
         Pose headPose = NRFrame.HeadPose;
-        videoTransform.position = headPose.position + headPose.rotation * Vector3.forward * 0.2f;
+        //videoTransform.position = headPose.position + headPose.rotation * Vector3.forward * 0.2f;
         screen.SetActive(true);
 
         videoPlayer.Prepare();
