@@ -85,7 +85,7 @@ public class RecordButtonHandler : MonoBehaviour
         {
             hologramOpacity = 0.9f,
             blendMode = BlendMode.Blend,
-            frameRate = 30,
+            frameRate = 20,
             audioState = NRVideoCapture.AudioState.MicAudio
         };
 

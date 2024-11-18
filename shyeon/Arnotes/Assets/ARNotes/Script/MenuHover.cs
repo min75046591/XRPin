@@ -133,7 +133,8 @@ public class MenuHover : MonoBehaviour
                             currentPin.setVideoPath(videoPath);
                             RecordingColor(SubTargetImage);
                             //빨간색으로 바꾸는 로직 추가
-
+                            hoverTimer = 0;
+                            this.mainController.DisableCreateUserInterface();
                         }
                         else if (isRecording)
                         {

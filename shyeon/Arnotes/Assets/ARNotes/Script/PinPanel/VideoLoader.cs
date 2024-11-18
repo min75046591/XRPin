@@ -12,6 +12,7 @@ public class VideoLoader : MonoBehaviour
     public VideoPlayer videoPlayer;
     private string videoFilePath;
     private Transform videoTransform;
+    public MainController mainController;
 
     private void Start()
     {
@@ -64,7 +65,6 @@ public class VideoLoader : MonoBehaviour
         Pose headPose = NRFrame.HeadPose;
         //videoTransform.position = headPose.position + headPose.rotation * Vector3.forward * 0.2f;
         screen.SetActive(true);
-
         videoPlayer.Prepare();
     }
 
@@ -78,6 +78,8 @@ public class VideoLoader : MonoBehaviour
     private void OnVideoEnd(VideoPlayer source)
     {
         screen.SetActive(false);
+        this.mainController.EnableReadUserInterface();
+
     }
 
 
