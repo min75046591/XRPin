@@ -6,9 +6,17 @@ using UnityEngine.UI;
 public class CountPanelController : MonoBehaviour
 {
     public Text pinCountText;  // PinCountText 오브젝트와 연결된 Text 컴포넌트
+    public Text timeText;
     public int currentPinCount;
+    private float startTime;
 
     public MainController mainController;
+
+    private void Start()
+    {
+        startTime = Time.time;
+    }
+
 
     void Update()
     {
@@ -19,16 +27,14 @@ public class CountPanelController : MonoBehaviour
     // 핀 개수 UI를 업데이트하는 메서드
     public void UpdatePinCountDisplay()
     {
-       
-        if (pinCountText != null)
-        {
-            currentPinCount = mainController.GetCurrentNonCompletedPin();
-            pinCountText.text = "비완료 핀 수: " + currentPinCount;
-            
-        }
-        else
-        {
-            Debug.LogWarning("PinCountText가 연결되지 않았습니다.");
-        }
+        float elapsedTime = Time.time - startTime;
+        int minutes = Mathf.FloorToInt(elapsedTime / 60);
+        int seconds = Mathf.FloorToInt(elapsedTime % 60);
+
+        timeText.text = $": {minutes}m {seconds}s ";
+
+        currentPinCount = mainController.GetCurrentNonCompletedPin();
+        pinCountText.text = $": {currentPinCount}";
+
     }
 }

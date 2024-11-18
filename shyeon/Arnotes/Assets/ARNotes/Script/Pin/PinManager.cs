@@ -24,6 +24,7 @@ public class PinManager : MonoBehaviour
     {
         GameObject currentPinPrefab = JudgePinPrefab(pin.GetPinStatus());
         pinTransform.position = pin.GetPinPoint();
+        Debug.Log("pin position: " + pinTransform.position);
         GameObject newPin = Instantiate(currentPinPrefab, pinTransform);
         newPin.name = pin.GetPinName();
         newPin.SetActive(true);

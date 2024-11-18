@@ -571,7 +571,7 @@ namespace NRKernal.Experimental.StreammingCast
             {
                 CameraParameters cameraParameters = new CameraParameters();
                 cameraParameters.hologramOpacity = 1f;
-                cameraParameters.frameRate = 20;
+                cameraParameters.frameRate = 15;
                 cameraParameters.cameraResolutionWidth = cameraResolution.width;
                 cameraParameters.cameraResolutionHeight = cameraResolution.height;
                 cameraParameters.pixelFormat = CapturePixelFormat.BGRA32;
