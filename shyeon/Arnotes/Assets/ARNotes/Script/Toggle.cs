@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NRKernal;
+using Unity.VisualScripting;
 
 public class InterfaceToggle : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class InterfaceToggle : MonoBehaviour
     private bool wasPinching = false; // 이전 프레임에서 Pinch 상태였는지 추적
     private GameObject currentUsedPanel;
 
+    private void Start()
+    {
+        createPanel.SetActive(false);
+        readPanel.SetActive(false);
+    }
 
     void Update()
     {
