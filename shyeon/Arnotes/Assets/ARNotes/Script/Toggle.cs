@@ -11,6 +11,7 @@ public class InterfaceToggle : MonoBehaviour
     public GameObject readPanel;
     public GameObject stationeryContrller;
     public GameObject UICursor;
+    public GameObject Quad;
     private bool isPanelOpen = false; // 패널의 초기 상태
     private bool wasPinching = false; // 이전 프레임에서 Pinch 상태였는지 추적
     private GameObject currentUsedPanel;
@@ -19,6 +20,7 @@ public class InterfaceToggle : MonoBehaviour
     {
         createPanel.SetActive(false);
         readPanel.SetActive(false);
+        Quad.SetActive(false);
     }
 
     void Update()
