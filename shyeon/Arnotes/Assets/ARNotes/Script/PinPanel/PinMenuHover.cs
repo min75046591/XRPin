@@ -83,7 +83,7 @@ public class PinMenuHover : MonoBehaviour
                         Debug.Log("video activate");
                         string currentPinVideoPath = currentPin.getVideoPaths();
                         videoLoader.VideoLoadAndPlay(currentPinVideoPath);
-                        this.mainController.DisableReadUserInterface();
+                        //this.mainController.DisableReadUserInterface();
                         break;
                     case "complete":
                         Debug.Log("complete activate");
