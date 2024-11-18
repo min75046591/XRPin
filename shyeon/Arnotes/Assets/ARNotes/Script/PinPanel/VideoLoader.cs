@@ -78,6 +78,7 @@ public class VideoLoader : MonoBehaviour
     private void OnVideoEnd(VideoPlayer source)
     {
         screen.SetActive(false);
+        source.Stop();
         this.mainController.EnableReadUserInterface();
 
     }

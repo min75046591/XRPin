@@ -229,7 +229,7 @@ RectTransform:
   m_GameObject: {fileID: 62012075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.00008514949}
-  m_LocalScale: {x: 400, y: 400, z: 100}
+  m_LocalScale: {x: 800, y: 600, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1998489371}
@@ -6773,7 +6773,7 @@ MonoBehaviour:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_AudioState: 3
+  m_AudioState: 0
   useGreenBackGround: 0
 --- !u!4 &1488266643
 Transform:
@@ -9643,7 +9643,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1996375024
 Transform:
   m_ObjectHideFlags: 0
