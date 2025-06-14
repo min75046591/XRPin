@@ -1,4 +1,4 @@
-# XR Pin, AR을 활용한 효윺적인 인수인계 시스템
+# XR Pin, AR을 활용한 효율적인 인수인계 시스템
 
 ## 프로젝트 소개
 <div align="center">
